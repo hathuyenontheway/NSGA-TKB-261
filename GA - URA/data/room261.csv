@@ -1,0 +1,752 @@
+Cơ sở,Dãy,Tên PH cũ,Chú thích,Sức chứa,Tính chất phòng,Mã Phòng,Tên phòng
+,NG1,TTNT1,THUC TAP NGOAI TRUOG,170,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT2,THUC TAP NGOAI TRUOG,170,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT3,THUC TAP NGOAI TRUOG,170,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT4,THUC TAP NGOAI TRUOG,170,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT5,THUC TAP NGOAI TRUOG,170,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT6,THUC TAP NGOAI TRUOG,170,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT7,THUC TAP NGOAI TRUOG,170,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT8,THUC TAP NGOAI TRUOG,170,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT9,THUC TAP NGOAI TRUOG,200,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT10,THUC TAP NGOAI TRUOG,170,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT11,THUC TAP NGOAI TRUOG,170,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT12,THUC TAP NGOAI TRUOG,170,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT13,THUC TAP NGOAI TRUOG,170,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT14,THUC TAP NGOAI TRUOG,170,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT15,THUC TAP NGOAI TRUOG,170,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT16,THUC TAP NGOAI TRUOG,170,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT17,THUC TAP NGOAI TRUOG,170,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT18,THUC TAP NGOAI TRUOG,170,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT19,THUC TAP NGOAI TRUOG,170,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT20,THUC TAP NGOAI TRUOG,170,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT21,THUC TAP NGOAI TRUOG,170,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT22,THUC TAP NGOAI TRUOG,170,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT23,THUC TAP NGOAI TRUOG,80,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT24,THUC TAP NGOAI TRUOG,80,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT25,THUC TAP NGOAI TRUOG,80,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT26,THUC TAP NGOAI TRUOG,80,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT27,THUC TAP NGOAI TRUOG,80,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT28,THUC TAP NGOAI TRUOG,80,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT29,THUC TAP NGOAI TRUOG,80,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT30,THUC TAP NGOAI TRUOG,80,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT31,THUC TAP NGOAI TRUOG,80,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT32,THUC TAP NGOAI TRUOG,80,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT33,THUC TAP NGOAI TRUOG,80,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT34,THUC TAP NGOAI TRUOG,80,NT,------,THUC TAP NGOAI TRUOG          
+,NG2,TTTNC1,THUC TAP NGOAI TRUOG,100,NT,------,THUC TAP NGOAI TRUOG          
+,NG2,TTTNC2,THUC TAP NGOAI TRUOG,100,NT,------,THUC TAP NGOAI TRUOG          
+,NG2,TTTNC3,THUC TAP NGOAI TRUOG,100,NT,------,THUC TAP NGOAI TRUOG          
+,NG2,TTTNC4,THUC TAP NGOAI TRUOG,100,NT,------,THUC TAP NGOAI TRUOG          
+,NG2,TTTNC5,THUC TAP NGOAI TRUOG,100,NT,------,THUC TAP NGOAI TRUOG          
+,NG2,TTTNC6,THUC TAP NGOAI TRUOG,100,NT,------,THUC TAP NGOAI TRUOG          
+,NG2,TTTNC7,THUC TAP NGOAI TRUOG,100,NT,------,THUC TAP NGOAI TRUOG          
+,NG2,TTTNC8,THUC TAP NGOAI TRUOG,100,NT,------,THUC TAP NGOAI TRUOG          
+,NG2,TTTNC9,THUC TAP NGOAI TRUOG,100,NT,------,THUC TAP NGOAI TRUOG          
+,NG2,TTTN01,THUC TAP NGOAI TRUOG,100,NT,------,THUC TAP NGOAI TRUOG          
+,NG2,TTTN02,THUC TAP NGOAI TRUOG,100,NT,------,THUC TAP NGOAI TRUOG          
+,NG2,TTTN03,THUC TAP NGOAI TRUOG,100,NT,------,THUC TAP NGOAI TRUOG          
+,NG2,TTTN04,THUC TAP NGOAI TRUOG,100,NT,------,THUC TAP NGOAI TRUOG          
+,NG2,TTTN05,THUC TAP NGOAI TRUOG,100,NT,------,THUC TAP NGOAI TRUOG          
+,NG2,TTTN06,THUC TAP NGOAI TRUOG,100,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT35,THUC TAP NGOAI TRUOG,200,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT36,THUC TAP NGOAI TRUOG,200,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT37,THUC TAP NGOAI TRUOG,200,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT38,THUC TAP NGOAI TRUOG,200,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT39,THUC TAP NGOAI TRUOG,200,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT40,THUC TAP NGOAI TRUOG,200,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT41,THUC TAP NGOAI TRUOG,200,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT42,THUC TAP NGOAI TRUOG,200,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT43,THUC TAP NGOAI TRUOG,200,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT44,THUC TAP NGOAI TRUOG,200,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT45,THUC TAP NGOAI TRUOG,200,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT46,THUC TAP NGOAI TRUOG,200,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT47,THUC TAP NGOAI TRUOG,200,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT48,THUC TAP NGOAI TRUOG,200,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT49,THUC TAP NGOAI TRUOG,200,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT50,THUC TAP NGOAI TRUOG,200,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT51,THUC TAP NGOAI TRUOG,200,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT52,THUC TAP NGOAI TRUOG,200,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT53,THUC TAP NGOAI TRUOG,200,NT,------,THUC TAP NGOAI TRUOG          
+,NG1,TTNT54,THUC TAP NGOAI TRUOG,200,NT,------,THUC TAP NGOAI TRUOG          
+1,B2,404B2,PTN HOA HUU CO      ,25,H,B2-404,PTN Hóa Hữu Cơ B2-404         
+1,B2,103B2,                    ,60,Q,B2-103,PTN Điện Hóa                  
+1,B6,107B6,PTN CƠ HOC ĐấT      ,67,Y,B6-107,PTN Cơ học Đất                
+1,B6,PTNCAU,                    ,108,9,B6-108,PTN Đường Ôtô                 
+1,C3,109C31,TACH RA 2 phong     ,80,GT,C3-109.1,PTN KThuật Giao Thông         
+1,C3,109C3,THI NGHIEM TAU      ,40,TA,C3-109,Phòng Thí Nghiệm Tàu          
+1,B4,202B4,TN THIET BI YH (VLY),62,UD,B4-202,PTN Thiết bị YHọc (Vlý)       
+1,B2,209B2,PTN HOA HUU CO      ,50,H_,B2-209,PTN Hóa Hữu Cơ B2-209         
+1,A4,511A4,PHONG MAY TINH      ,36,MQ,A4-511,Phòng M/tính  - OISP          
+1,A4A,203A4,DANH CHO QT TU HK141,0,DB,A4-203,P/học A4-203 - OISP           
+1,A4A,202A4,DANH CHO QT TU HK141,0,QT,A4-202,P/học A4-202A - OISP          
+1,A4B,311A4,MsM                 ,0,QT,A4-311,P/học A4-311 - MsM            
+1,A4B,312A4,PHONG CUA MSM       ,0,QT,A4-312,P/học A4-312 - MsM            
+1,A4C,406A4,Dao tao Quoc te     ,0,QT,A4-406,P/học A4-406 - OISP           
+1,A4C,407A4,VAN PHONG OISP      ,0,QT,A4-407,P/học A4-407 - OISP           
+1,A4C,408A4,LOP MCI             ,40,QT,A4-408,P/học A4-408 - MCI            
+1,A4C,409A4,LOP MCI             ,56,DB,A4-409,P/học A4-409 - MCI            
+1,A4C,410A4,Dao tao Quoc te     ,30,QT,A4-410,P/học A4-410 - OISP           
+1,A4D,506A4,                    ,40,QT,A4-506,P/học A4-506 - OISP           
+1,A4D,507A4,                    ,40,QT,A4-507,P/học A4-507 - OISP           
+1,A4D,508A4,                    ,40,QT,A4-508,P/học A4-508 - OISP           
+1,A4D,509A4,                    ,40,QT,A4-509,P/học A4-509 - OISP           
+1,A4D,510A4,                    ,72,QT,A4-510,P/học A4-510 - OISP           
+1,B1,112B1,TN DTU CONG SUAT 1  ,30,E,B1-112.2,PTN Điện tử Công suất         
+1,B1,114B1,PMT KHOA DIEN       ,40,I,B1-114,PMT Khoa Điện                 
+1,B10,102B10,PHONG TN MO PHONG   ,75,QL,B10-102,PTN Mô phỏng                  
+1,B10,201B10,VAN PHONG TT BR&T   ,40,BR,B10-201,                              
+1,B10,202B10,PHONG HOC QUOC TE   ,48,DB,B10-202,P/học B10-202 - Việt-Pháp     
+1,B10,203B10,PHONG HOC QUOC TE   ,70,DB,B10-203,P/học B10-203                 
+1,B10,204B10,PHONG HOC QUOC TE   ,40,QT,B10-204,P/học B10-204 - KSTN - Mtinh  
+1,B10,205B10,PHONG HOC QUOC TE   ,40,QT,B10-205,P/học B10-205 - KSTN - Mtinh  
+1,B10,206B10,PHONG HOC QUOC TE   ,50,QT,B10-206,P/học B10-206 - Việt-Pháp     
+1,B10,207B10,PHONG HOC QUOC TE   ,48,QT,B10-207,P/học B10-207 - Việt-Pháp     
+1,B10,301B10,                    ,64,,B10-301,P/học B10-301 - Việt-Pháp     
+1,B10,TNCNTP,PTN CN THUC PHAM    ,24,CP,TNCNTP,                              
+1,B10,303B10,"KHONG XAI,P.LAM VIEC",0,P1,B10-303,P/học B10-303 - DTTXa         
+1,B11,203B11,P.TN DO LUONG       ,30,DL,B11-203,PTN Đo lường                  
+1,B1A,206B1,PHONG DANH RIENG QT ,48,QT,B1-206,P/học B1-206 - KSTN           
+1,B1A,207B1,PHONG CHUYEN DE DIEN,0,QT,B1-207,P/học B1-207 - KSTN           
+1,B1A,208B1,PHONG DANH RIENG QT ,88,QT,B1-208,P/học B1-208 - OISP           
+1,B1A,305B1,PHONG DANH RIENG QT ,72,QT,B1-305,P/học B1-305                  
+1,B1A,306B1,PHONG DANH RIENG QT ,88,QT,B1-306,P/học B1-306 - OISP           
+1,B1A,307B1,PHONG DANH RIENG QT ,32,QT,B1-307,P/học B1-307                  
+1,B1A,102B1,TN HE THONG DIEN    ,30,F,B1-102,PTN Hệ thống Điện             
+1,B1B,201B1,PHONG DANH RIENG QT ,40,QT,B1-201,P/học B1-201                  
+1,B1B,202B1,PHONG DANH RIENG QT ,40,QT,B1-202,P/học B1-202                  
+1,B1B,203B1,PHONG DANH RIENG QT ,60,QT,B1-203,P/học B1-203                  
+1,B1B,301B1,PHONG DANH RIENG QT ,56,QT,B1-301,P/học B1-301                  
+1,B1B,302B1,                    ,56,QT,B1-302,P/học B1-302                  
+1,B1B,303B1,                    ,56,QT,B1-303,P/học B1-303                  
+1,B1B,203B3,PTN VI MACH         ,30,XG,B3-203,PTN Vi mạch                   
+1,B1C,209B1,PTN TRUYEN SO LIEU  ,40,SO,B1-209,PTN Truyền Số Liệu            
+1,B1C,206B3,PHONG DANH RIENG QT ,0,QT,B3-206,P/học B3-206 - OISP           
+1,B1C,205B3,PHONG KHOA DIEN     ,0,K,B3-205,P/học B3-205 - OISP           
+1,B1D,210B1,                    ,48,QT,B1-210,P/học B1-210                  
+1,B1D,211B1,                    ,32,QT,B1-211,P/học B1-211                  
+1,B1D,212B1,                    ,80,QT,B1-212,P/học B1-212                  
+1,B1D,213B1,                    ,80,QT,B1-213,P/học B1-213                  
+1,B1D,214B1,                    ,48,QT,B1-214,P/học B1-214                  
+1,B1D,215B1,                    ,48,QT,B1-215,P/học B1-215                  
+1,B1E,308B1,                    ,72,QT,B1-308,P/học B1-308                  
+1,B1E,309B1,                    ,56,QT,B1-309,P/học B1-309                  
+1,B1E,310B1,                    ,32,QT,B1-310,P/học B1-310                  
+1,B1E,311B1,                    ,80,QT,B1-311,Phòng tự học B1-311           
+1,B1E,313B1,                    ,56,QT,B1-313,P/học B1-313                  
+1,B1E,314B1,                    ,56,QT,B1-314,P/học B1-314                  
+1,B1E,315B1,                    ,56,QT,B1-315,P/học B1-315                  
+1,B2,107B2,PTN CN SINH HOC     ,20,S2,B2-107,PTN CN Sinh Học               
+1,B2,201B2,KY SU TAI NANG HOA  ,32,QT,B2-201,P/học B2-201 - KSTN - Hóa     
+1,B2,202B2,KY SU TAI NANG XDUNG,32,QT,B2-202,P/học B2-202 - KSTN - XDựng   
+1,B2,402B2,                    ,0,MO,B2-402,TH Phân tích GIS              
+1,B2,305B2,                    ,46,J,B2-305,PTN Hóa sinh T/Phẩm           
+1,B8,PTNHDK,PTN HOA DAU KHI     ,60,7,B2-109,PTN Hoá Dầu khí               
+1,B2,302B2,PTN CAM QUAN        ,0,HC,B2-302,PTN Cảm quan                  
+1,B2,118B2,PTN VAT LIEU POLYME ,30,/,B2-118,PTN Vật liệu Polyme           
+1,B2,117B2,PTN CN LEN MEN      ,30,LM,B2-117,PTN CN Lên men                
+1,B2,406B2,PTN HOA DAI CUONG   ,36,VC,B2-406,PTN Hoá đại cương             
+1,B2,108B2,PTN HOA SINH        ,20,HS,B2-108,PTN Hóa Sinh                  
+1,B2,205B2,PTN XUC TAC         ,40,XT,B2-205,PTN Xúc tác                   
+1,B2,119B2,P.TN TRONG DIEM CNHH,40,DK,B2-119,PTN Trọng điểm CNHH           
+1,B2,214B2,P.TN HOA LY         ,40,L,B2-214,PTN Hoá Lý                    
+1,B2,206B2,P.TN HOA PHAN TICH  ,40,P,B2-206,PTN Hoá phân tích             
+1,B2A,405B2,PTN HOA VO CO       ,36,VA,B2-405,PTN Hoá vô cơ                 
+1,B2A,213B2,CHUYEN NGANH VO CO  ,96,VB,B2-213,PTN C/ngành Vô cơ             
+1,B2A,308B2,"PTN VI SINH TP, SH  ",52,;,B2-308,"PTN Vi sinh TP,SH B2-308      "
+1,B2A,307B2,"PTN VI SINH TP, SH  ",0,;,B2-307,"PTN Vi sinh TP,SH B2-307      "
+1,B3,109B3,PTN SCHNEIDER       ,0,SC,B3-109,PTN Schneider                 
+1,B3,112B3,PTN VIEN THONG      ,30,V1,B3-112,PTN Viễn thông B3-112         
+1,B3,202B3,TN KT SO            ,36,D1,B3-202,TN KT số                      
+1,B3,111B3,PTN VIEN THONG      ,20,V2,B3-111,PTN Viễn Thông B3-111         
+1,B1,103B1,TN KY THUAT DIEN    ,30,N,B1-103,PTN Kỹ Thuật Điện             
+1,B3,207B3,PTN DIEU KHIEN TD   ,35,G,B3-207,PTN Điều khiển TĐ             
+1,C2,PTTDT,PHONG TT DIEN TU    ,30,M,C2-PTTDT,Phòng TT điện tử              
+1,B1,PTTMD,THUC TAP MAY DIEN 1 ,24,T§,B1-116,PTT MAY DIEN 2                
+1,B4,PTNTSL,PHONG TN TR SO LIEU ,30,TV,PTNTSL,                              
+1,C2,PTTDT1,PHONGTT DIENTU 1    ,30,M,C2-PTTDT1,Phòng TT điện tử              
+1,B3B,209B3,TN DUNG CU BAN DAN  ,30,B2,B3-209,PTN Dụng cụ bán dẫn           
+1,B3B,102B3,TAM NGUNG SD 242    ,0,O,B3-102,PTN Mạch và Đo                
+1,B3B,103B3,PTN MACH DIEN       ,35,MD,B3-103,PTN Mạch điện                 
+1,B4,PTHTL,PTN CO LUU CHAT     ,26,C,PTHTL,PTN Cơ lưu chất               
+1,B4,201B4,TT MP CO KY THUAT   ,72,KT,B4-201,TT MP Cơ Kỹ thuật             
+1,B4,105B4,PMT BM CO KT        ,30,B4,B4-105,PMT BM Cơ KT                  
+1,B4A,301B4,                    ,60,QT,B4-301,P/học B4-301 - OISP           
+1,B4A,302B4,                    ,60,QT,B4-302,P/học B4-302 - OISP           
+1,B4A,303B4,                    ,60,QT,B4-303,P/học B4-303 - OISP           
+1,B4A,305B4,                    ,80,QT,B4-305,P/học B4-305 - OISP           
+1,B4A,306B4,PHONG HOC QUOC TE   ,80,QT,B4-306,P/học B4-306 - OISP           
+1,B4A,401B4,                    ,60,QT,B4-401,P/học B4-401 - OISP           
+1,B4A,402B4,                    ,60,QT,B4-402,P/học B4-402 - OISP           
+1,B4A,403B4,                    ,60,QT,B4-403,P/học B4-403 - OISP           
+1,B4A,405B4,                    ,60,QT,B4-405,P/học B4-405 - OISP           
+1,B4A,406B4,                    ,108,QT,B4-406,P/học B4-406 - OISP           
+1,B4B,501B4,                    ,80,QT,B4-501,P/học B4-501 - OISP           
+1,B4B,502B4,                    ,80,QT,B4-502,P/học B4-502 - OISP           
+1,B4B,504B4,                    ,60,QT,B4-504,P/học B4-504 - OISP           
+1,B4B,505B4,                    ,120,GD,B4-505,P/học B4-505 - OISP           
+1,B4B,601B4,                    ,0,QT,B4-601,P/học B4-601 - OISP           
+1,B4B,602B4,                    ,0,QT,B4-602,P/học B4-602 - OISP           
+1,B4B,604B4,                    ,0,QT,B4-604,P/học B4-604 - OISP           
+1,B4B,605B4,                    ,0,QT,B4-605,P/học B4-605 - OISP           
+1,B5,B5,PTN BO MON CN NHIET ,30,CY,B5-000,PTN Bộ môn CN Nhiệt           
+1,B6,GDB6,GIANG DUONG NHA B6  ,150,XD,B6-GDB6,Giảng đường B6 (Hoà bình)     
+1,B6,301B6,PHONG HOC QUOC TE   ,50,QT,B6-301,P/học B6-301                  
+1,B6,302B6,PHONG HOC QUOC TE   ,60,QT,B6-302,P/học B6-302                  
+1,B6,303B6,PHONG HOC QUOC TE   ,60,QT,B6-303,P/học B6-303                  
+1,B6,306B6,PHONG HOC QUOC TE   ,92,QT,B6-306,P/học B6-306                  
+1,B6,PTNVLX,                    ,40,R,PTNVLX,                              
+1,B6,109B6,PTN SUC BEN 2       ,40,S,B6-109,PTN Sức bền 2                 
+1,C2,PTNC2,PTN CONG TRINH (C2) ,71,A1,C2-PTN,PTN Công trình (C2)           
+1,B6,201B6,PTN VAT LY PTNLY    ,40,LY,B6-201,PTN Vật lý B6-201             
+1,B6,202B6,KHONG XAI           ,0,,B6-202,P/học B6-202                  
+1,C3,PTNTNN,TN THUY LUC & CTT   ,0,TL,PTNTNN,PTN Thủy lực và CT Thuỷ       
+1,B6T,PTTTRD,SAN TRUONG          ,30,D,CS1-TRD,Sân trường - CS1              
+1,B6T,PTTTR2,SAN TRUONG          ,30,D,CS1-TR2,Sân trường - CS1              
+1,B6T,PTTTR3,SAN TRUONG          ,30,D,CS1-TR3,Sân trường - CS1              
+1,B6T,PTTTR4,SAN TRUONG          ,30,D,CS1-TR4,Sân trường - CS1              
+1,B6T,PTTTR5,SAN TRUONG          ,30,D,CS1-TR5,Sân trường - CS1              
+1,B6T,PTTTRQ,SAN TRUONG          ,20,TV,CS1-TRQ,Sân trường - CS1              
+1,B7,105B7,PTN MOI TRUONG      ,30,M1,B7-105,PTN Môi trường B7-105         
+1,B7,106B7,PTN MOI TRUONG      ,100,M1,B7-106,PTN Môi trường B7-106         
+1,B8,201B8,PMT DIA CHAT        ,60,DC,B8-201,PMT Địa chất                  
+1,B8,202B8,PMT DIA CHAT        ,30,DC,B8-202,PMT DIA CHAT                  
+1,B8,204B8,PHONG CHUYEN DE DC  ,100,DC,B8-204,P/học B8-204 (đang sửa)       
+1,B8,303B8,PHONG HOC QUOC TE   ,70,QT,B8-303,P/học B8-303                  
+1,B8,304B8,PHONG HOC QUOC TE   ,70,QT,B8-304,P/học B8-304                  
+1,B8,305B8,                    ,0,,B8-305,P/học B8-305                  
+1,B8,108B8,                    ,50,1,B8-108,PTN Địa chất Cơ sở            
+1,B8,302B8,PHONG HOC QUOC TE   ,40,QT,B8-302,TT Thạch học                  
+1,B6,PTNDKT,PTN DIA KY THUAT    ,20,G1,PTNDKT,PTN Địa kỹ thuật              
+1,B8,101B8,PHONG CD CAO CAP    ,51,\,B8-101,Phòng CĐề Khoa ĐC-DK          
+1,B9,201B9,PHONG HOC QUOC TE   ,60,QT,B9-201,P/học B9-201 - KSTN           
+1,B9,202B9,PHONG HOC QUOC TE   ,54,QT,B9-202,P/học B9-202 - KSTN           
+1,B9,203B9,PHONG HOC QUOC TE   ,50,QT,B9-203,P/học B9-203 - KSTN - CK      
+1,B9,204B9,PHONG HOC QUOC TE   ,40,QT,B9-204,P/học B9-204 - KSTN - CK      
+1,B9,303B9,PHONG MAY TINH      ,0,TH,B9-303,Phòng Thực hành máy tính      
+1,B9,304B9,khong xai           ,0,,B9-304,P/học B9-304                  
+1,C3,PH3,PHONG HOC 3 - TTBDCN,50,BD,C1-109B,Phòng Học 3 - IUT             
+1,BR,SAN1,SAN THE THAO        ,85,T,B12-SAN1,Sân thể thao B12              
+1,BR,SAN3,SAN THE THAO        ,85,T,B12-SAN3,Sân thể thao B12              
+1,BR,SAN4,SAN THE THAO        ,85,T,------,Sân thể thao KTX Hòa Hảo Q10  
+1,BR,SAN2,SAN THE THAO        ,85,T,B12-SAN2,Sân thể thao B12              
+1,BS,SAN5,SAN THE THAO        ,85,T5,B12-SAN5,Sân thể thao B12              
+1,BS,SAN6,SAN THE THAO        ,90,T5,------,                              
+1,BS,SAN7,SAN THE THAO        ,85,T5,B12-SAN7,Sân thể thao B12              
+1,BS,SAN8,SAN THE THAO        ,85,T5,B12-SAN8,Sân thể thao B12              
+1,C1,101C1,PTN CHE TAO MAY     ,25,2,C1-101,PTN Chế tạo máy               
+1,C1,205C1,TT DIEN-DIEN TU1(CK),30,X2,C1-205,TT Điện-Điện tử 1 (CK)        
+1,C5,101C5,TN KY THUAT HK      ,40,HK,C5-101,PTN KThuật Hàng không         
+1,C1,203C1,TT DIEN-DIEN TU1(CK),30,X2,C1-203,TT Điện-Điện tử 2 (CK)        
+1,C1,202C1,TT tran bi dien(CK) ,30,X2,C1-202,TT Trang bị điện (CK)         
+1,C2,PTTMAY,THUC TAP MAY        ,50,=,C2-TTMAY,Phòng Thực tập May            
+1,C3,102C3,PHONG SO 1 XUONG OTO,40,+,C3-102,Phòng số 1 Xưởng ô tô         
+1,C4,105C4,PTN SILICAT (DC+CN) ,35,SI,C4-105,PTN Silicat (ĐC+CN)           
+1,C4B,204C4,PTN CNVL            ,138,>,C4-204,PTN CN Vật liệu               
+1,C4B,301C4,                    ,80,QT,C4-301,P/học C4-301                  
+1,C4B,302C4,                    ,50,QT,C4-302,P/học C4-302                  
+1,C4B,303C4,                    ,50,QT,C4-303,P/học C4-303                  
+1,C4B,304C4,                    ,80,QT,C4-304,P/học C4-304                  
+1,C4B,401C4,                    ,50,QT,C4-401,P/học C4-401                  
+1,C4B,402C4,                    ,80,QT,C4-402,P/học C4-402                  
+1,C4C,403C4,                    ,80,QT,C4-403,P/học C4-403                  
+1,C4C,404C4,                    ,50,QT,C4-404,P/học C4-404                  
+1,C4C,501C4,                    ,50,QT,C4-501,P/học C4-501                  
+1,C4C,502C4,                    ,80,QT,C4-502,P/học C4-502                  
+1,C4C,503C4,                    ,124,GD,C4-503,P/học C4-503                  
+1,C1,XCK1,XUONG CO KHI 1      ,25,X,C1-XCK,Xưởng cơ khí                  
+1,C1,XKNIUT,XUONG KHI NEN IUT   ,0,KN,C1-106B,Xưởng khí nén                 
+1,C1,206BC1,XUONG DIEN TU IUT   ,30,DT,C1-206B,Xưởng điện tử IUT             
+1,C1,201XC1,PTN THUY LUC&KHI NEN,30,KU,C1-201X,PTN Thủy lực và Khí nén       
+1,C5,106C5,PTT VIEN THAM       ,60,VI,C5-106,                              
+1,C1,PMTIUT,PHONG MAY TINH IUT  ,25,MU,C1-105B,Phòng Máy tính IUT            
+1,C1,XHAIUT,XUONG HAN IUT       ,25,XH,C1-108B,Xưởng hàn IUT                 
+1,C1,XTLIUT,XUONG THUY LUC IUT  ,25,LU,C1-104B,Xưởng thủy lực IUT            
+1,C1,XLAIUT,XUONG LANH IUT      ,30,XL,C1-102B,Xưởng lạnh IUT                
+1,C1,207BC1,XUONG TU DONG IUT   ,30,NU,C1-207B,PTN Tự động hoá 2 - IUT       
+1,C1,107BC1,XUONG CO KHI IUT1   ,33,UI,C1-107B,Xưởng cơ khí 1 - IUT          
+1,C1,204BC1,XUONG DIEN IUT      ,30,DU,C1-204B,Xưởng điện IUT                
+1,C5,PTNBOT,PTN KIM LOAI BOT IUT,23,KO,PTNBOT,PTN Kim loại bột IUT          
+1,C5A,301C5,                    ,0,QT,C5-301,P/học C5-301                  
+1,C5A,302C5,                    ,50,QT,C5-302,P/học C5-302                  
+1,C5A,303C5,                    ,80,QT,C5-303,P/học C5-303                  
+1,C5A,304C5,                    ,50,QT,C5-304,P/học C5-304                  
+1,C5A,401C5,                    ,80,QT,C5-401,P/học C5-401                  
+1,C5A,402C5,                    ,50,QT,C5-402,P/học C5-402                  
+1,C5B,403C5,                    ,80,QT,C5-403,P/học C5-403                  
+1,C5B,502C5,                    ,80,QT,C5-502,P/học C5-502                  
+1,C5B,503C5,                    ,80,QT,C5-503,P/học C5-503                  
+1,C5B,504C5,                    ,50,QT,C5-504,P/học C5-504                  
+1,C5B,501C5,                    ,50,QT,C5-501,P/học C5-501                  
+1,C6,C106,                    ,120,LT,C6-106,P/học C6-106 - BKEnglish      
+1,C6A,301C6,                    ,25,PH,C6-301,P/học C6-301 - BKEnglish      
+1,C6A,302C6,                    ,25,PH,C6-302,P/học C6-302 - BKEnglish      
+1,C6A,303C6,                    ,25,PH,C6-303,P/học C6-303 - BKEnglish      
+1,C6A,304C6,                    ,25,PH,C6-304,P/học C6-304 - BKEnglish      
+1,C6A,305C6,                    ,25,PH,C6-305,P/học C6-305 - BKEnglish      
+1,C6A,306C6,                    ,25,PH,C6-306,P/học C6-306 - BKEnglish      
+1,C6A,307C6,                    ,25,PH,C6-307,P/học C6-307 - BKEnglish      
+1,C6A,309C6,                    ,25,PH,C6-309,P/học C6-309 - BKEnglish      
+1,C6A,308C6,                    ,25,PH,C6-308,P/học C6-308 - BKEnglish      
+1,C6A,204C6,                    ,30,PH,C6-204,P/học C6-204 - BKEnglish      
+1,C6B,501C6,                    ,80,QT,C6-501,P/học C6-501 - Việt-Pháp      
+1,C6B,502C6,                    ,80,QT,C6-502,P/học C6-502 - Việt-Pháp      
+1,C6B,401C6,                    ,80,QT,C6-401,P/học C6-401                  
+1,C6B,402C6,                    ,80,QT,C6-402,P/học C6-402                  
+1,C6B,403C6,                    ,80,QT,C6-403,P/học C6-403                  
+1,C6C,601C6,                    ,80,QT,C6-601,P/học C6-601                  
+1,C6C,602C6,                    ,48,QT,C6-602,P/học C6-602                  
+1,C6C,503C6,                    ,80,QT,C6-503,P/học C6-503 - Việt-Pháp      
+1,C6C,603C6,                    ,48,QT,C6-603,P/học C6-603                  
+1,C6C,604C6,                    ,48,QT,C6-604,P/học C6-604                  
+1,?,TTCHXD,P.TINH TOAN CO HOCXD,50,TX,TTCHXD,P.Tính toán cơ họcXD          
+1,B1,300B1,PTN TUDONGHOA       ,30,G2,B1-300,PTN Tự động hóa               
+1,PDA,PDAMH,PHONG DO AN MON HOC ,80,.,------,PHONG ĐAMH                    
+1,PDA,PDAMH2,PHONG DO AN MON HOC ,80,.,------,PHONG ĐAMH                    
+1,PDA,PDAMH3,PHONG DO AN MON HOC ,80,.,------,PHONG ĐAMH                    
+1,PDA,PDAMH4,PHONG DO AN MON HOC ,80,.,------,PHONG ĐAMH                    
+1,PDA,PDAMH5,PHONG DO AN MON HOC ,80,.,------,PHONG ĐAMH                    
+1,PDA,PDAMH6,PHONG DO AN MON HOC ,80,.,------,PHONG ĐAMH                    
+1,PDA,PDAMH7,PHONG DO AN MON HOC ,80,.,------,PHONG ĐAMH                    
+1,PDA,PDAMH8,PHONG DO AN MON HOC ,80,.,------,PHONG ĐAMH                    
+1,PDA,PDAMH9,PHONG DO AN MON HOC ,80,.,------,PHONG ĐAMH                    
+1,PDA,PDAMH1,PHONG DO AN MON HOC ,80,.,------,PHONG ĐAMH                    
+1,PDA,PDAMHA,PHONG DO AN MON HOC ,80,.,------,PHONG ĐAMH                    
+1,PDA,PDAMHB,PHONG DO AN MON HOC ,80,.,------,PHONG ĐAMH                    
+1,PDA,PDAMHD,PHONG DO AN MON HOC ,80,.,------,PHONG ĐAMH                    
+1,PDA,PDAMHC,PHONG DO AN MON HOC ,80,.,------,PHONG ĐAMH                    
+1,PDA,PDAMHE,PHONG DO AN MON HOC ,80,.,------,PHONG ĐAMH                    
+1,C5,202C5,THUC TAP PCMT 504004,40,5,C5-202,PTN Kỹ Thuật Máy Tính         
+1,C6,103C6,PHONG MAY TINH      ,40,MT,C6-103,Phòng Thực hành Máy tính      
+1,C6,104C6,PHONG MAY TINH      ,40,TH,C6-104,Phòng Thực hành Máy tính      
+1,A5,P1A5,PHONG MAY TINH      ,0,TH,A5-106.1,P. Thực hành Máy tính 1 - A5  
+1,A5,P2A5,PHONG MAY TINH      ,0,TH,A5-106.2,P. Thực hành Máy tính 2 - A5  
+1,A4C,411A4,DAO TAO QUOC TE-NHAT,30,QT,A4-411,P/học 411A4-OISP-Tiếng Nhật   
+1,A4C,412A4,DAO TAO QUOC TE-NHAT,30,QT,A4-412,P/học A4-412 - OISP           
+1,A4A,204A4,DAO TAO QUOC TE     ,0,QT,A4-204,P/học A4-204 - OISP           
+1,A4A,205A4,DAO TAO QUOC TE     ,0,QT,A4-205,P/học A4-205 - OISP           
+1,A4A,206A4,DAO TAO QUOC TE     ,0,QT,A4-206,P/học A4-206 - OISP           
+1,B2,116B2,P.TN VI SINH        ,30,{},B2-116,PTN Vi sinh                   
+1,C1,104BC1,CHUYEN QUA 201C1    ,0,CN,C1-104B1,PTN Hệ thống CN               
+1,C1,102AC1,Phòng MT CK Vẽ      ,40,C2,C1-102A,Phòng MTCK CAD/CAM            
+1,C1,105C1,PTN THIET KE MAY    ,40,C4,C1-105,PTN Thiết kế máy              
+1,C1,XDUC,VL HOC VA XU LY     ,40,C5,C1-XDU,Xưởng đúc IUT                 
+1,C2,PTTMD1,THUC TAP MAY DIEN2.1,30,M9,C2-103A,PTT MAY DIEN 2.1              
+1,B1,117B1,PTN MO PHONG ETAP   ,26,ET,B1-117,PTN Mô phỏng ETAP             
+1,B2,104B2,PCDHDK              ,40,A2,B2-104,PTN Chuyên đề Dầu khí         
+1,C1,201C1,BO (TACH RA 3 PHONG),0,K1,C1-201,TT Khí nén (CK) C1-201        
+1,C3,PTNC3,PTN CKT VA DĐ (GT)  ,60,TT,C3-PTNC3,PTN CKT và DĐ (GT)            
+1,C3,105C3,PTN NAU DUC KIM LOAI,30,N2,C3-105,PTN Nấu đúc kim loại          
+1,C1,201BC1,PTN BO MON CDT      ,30,X9,C1-201B,PTN Bộ môn CơĐiệnTử C1-201B   
+1,C1,201AC1,PTN BO MON CODIENTU ,25,CX,C1-201A,PTN Bộ môn CơĐiệnTử C1-201A   
+1,B2,PTNB2C,PTN CAU TRUC VAT/L  ,40,P3,B2-PTNB2C,PTN Cấu Trúc Vật/L            
+1,B6,SANB6,TT BAN DO           ,200,T9,B6-SANB6,TT Bản đồ                     
+1,B1,104B1,PHONG CĐ KHOA DIEN  ,30,DD,B1-104,Phòng Chuyên đề Khoa Điện     
+1,C6,203C6,PHONG NGOAI NGU     ,40,NN,C6-203,P/học C6-203 - BKEnglish      
+1,C1,104C1,PTN KY THUAT CHE TAO,22,CC,C1-104,PTN Kỹ thuật Chế tạo          
+1,C3,PTNMXD,PTN MAY XAY DUNG(CK),30,MX,C3-PTNMXD,PTN Máy xây dựng (CK)         
+1,B6,108B6,PTN CAU DUONG       ,30,O6,B6-108,PTN Cầu Đường                 
+1,C5,205C5,LY THUYET TAU THUY  ,0,BI,C5-205,PTN Tàu Thuỷ                  
+1,B6,111AB6,PTN VAT LIEU XD     ,40,VX,B6-111A,PTN Vật liệu XD               
+1,B6,111BB6,PTN VAT LIEU XD(HUY),0,VX,B6-111B,PTN Vật liệu XD               
+1,A3,PCDA3,PHONG CĐ A3         ,30,A3,A3-CHUYENDEA3,Phòng chuyên đề khoa MT       
+1,C2,PTTCKT,XUONG C2 (CKT)      ,30,U2,C2-XUONGC2,Xưởng C2 - Thực tập CKT       
+1,B6,102B6,PTN DO VE DIA HINH  ,30,DV,B6-102,PTN đo vẽ địa hình            
+1,C1,201CC1,PTN HE THONG CN     ,35,K2,C1-201C,PTN hệ thống CN               
+1,B2,403B2,PTN HOA HUU CO      ,25,H,B2-403,PTN Hoá Hữu Cơ                
+1,B11,B11DET,PTN DET Y VIET      ,25,E1,B11-102,PTN Dệt                       
+1,B11,B11MAY,PTN THUC HANH MAY   ,40,E2,B11-102,PTN Dệt                       
+1,B11,B11HOA,PTN HOA DET         ,25,E3,B11-102,PTN Dệt                       
+1,B3,106B3,PTN HE THONG NL     ,25,E4,B3-106,PTN Hệ Thống Năng Lượng       
+1,C2,PTTDT2,PHONGTT DIENTU 2    ,30,MA,C2-PTTDT2,Phòng TT điện tử              
+1,C2,PTTMD2,THUC TAP MAY DIEN2.2,30,M9,C2-103B,PTT MAY DIEN 2.2              
+1,B6,304B6,PHONG HOC QUOC TE   ,60,QT,B6-304,PHONG HOC                     
+1,A5,108A5,PHONG HOC SO        ,45,GH,A5-108,Phòng học số                  
+1,BR,SAN9,SAN THE THAO        ,85,T,B12-SAN9,Sân thể thao B12              
+1,BR,SAN10,SAN THE THAO        ,85,T,B12-SAN10,Sân thể thao B12              
+1,B6,305B6,PHONG HOC QUOC TE   ,60,QT,B6-305,Phòng học quốc tế             
+1,B9,101B9,PHONG HOC           ,27,QT,B9-101,Phòng chuyên đề khoa QL       
+1,B5,B5-1,PTN CN NHIEU(ME2014),30,CZ,B5-001,PTN Bộ môn CN Nhiệt           
+1,B6,202CB6,PHONG CHUYEN DE XD  ,0,,B6-202C,Phòng M/tính  - OISP          
+1,B8,301B8,PHONG HOC QUOC TE   ,66,QT,B8-301,TT Thạch học                  
+1,C6,F1-2C6,PHONG TN TRONG DIEM ,40,F1,F1-2C6-PTNTRONGDIEM,Phòng TN Trọng Điểm           
+1,C3,109C32,TACH RA 2 phong     ,80,GT,C3-109.2,PTN KThuật Giao Thông         
+1,C1,XCK2,XUONG CO KHI 1      ,25,X,C1-XCK,Xưởng cơ khí                  
+1,C1,XCK3,XUONG CO KHI 1      ,25,X,C1-XCK,Xưởng cơ khí                  
+1,BS,SAN9,SAN THE THAO        ,85,T5,B12-SAN,Sân thể thao B12              
+1,BS,SAN10,SAN THE THAO        ,85,T5,B12-SAN,Sân thể thao B12              
+1,BS,SAN11,SAN THE THAO        ,85,T5,B12-SAN,Sân thể thao B12              
+1,BS,SAN12,SAN THE THAO        ,85,T5,B12-SAN,Sân thể thao B12              
+1,BS,SAN13,SAN THE THAO        ,85,T5,B12-SAN,Sân thể thao B12              
+1,BS,SAN14,SAN THE THAO        ,85,T5,B12-SAN,Sân thể thao B12              
+1,BS,SAN15,SAN THE THAO        ,85,T5,B12-SAN,Sân thể thao B12              
+1,BS,SAN16,SAN THE THAO        ,85,T5,B12-SAN,Sân thể thao B12              
+1,BS,SAN17,SAN THE THAO        ,85,T5,B12-SAN,Sân thể thao B12              
+1,BS,SAN18,SAN THE THAO        ,85,T5,B12-SAN,Sân thể thao B12              
+1,BS,SAN19,SAN THE THAO        ,85,T5,B12-SAN,Sân thể thao B12              
+1,BS,SAN20,SAN THE THAO        ,85,T5,B12-SAN,Sân thể thao B12              
+1,BS,SAN21,SAN THE THAO        ,85,T5,B12-SAN,Sân thể thao B12              
+1,BS,SAN22,SAN THE THAO        ,85,T5,B12-SAN,Sân thể thao B12              
+1,BS,SAN23,SAN THE THAO        ,85,T5,B12-SAN,Sân thể thao B12              
+1,BS,SAN24,SAN THE THAO        ,85,T5,B12-SAN,Sân thể thao B12              
+1,BS,SAN25,SAN THE THAO        ,85,T5,B12-SAN,Sân thể thao B12              
+1,BS,SAN26,SAN THE THAO        ,85,T5,B12-SAN,Sân thể thao B12              
+1,BS,SAN27,SAN THE THAO        ,85,T5,B12-SAN,Sân thể thao B12              
+1,BS,SAN28,SAN THE THAO        ,85,T5,B12-SAN,Sân thể thao B12              
+1,BS,SAN29,SAN THE THAO        ,85,T5,B12-SAN,Sân thể thao B12              
+1,BS,SAN30,SAN THE THAO        ,85,T5,B12-SAN,Sân thể thao B12              
+1,BS,SAN31,SAN THE THAO        ,85,T5,B12-SAN,Sân thể thao B12              
+1,C1,XCK4,XUONG CO KHI 1      ,25,X,C1-XCK,Xưởng cơ khí                  
+1,C1,XCK5,XUONG CO KHI 2      ,25,X1,C1-XCK,Xưởng cơ khí                  
+1,C1,XCK6,XUONG CO KHI 2      ,25,X1,C1-XCK,Xưởng cơ khí                  
+1,C1,XCK7,XUONG CO KHI 2      ,25,X1,C1-XCK,Xưởng cơ khí                  
+1,C1,XCK8,XUONG CO KHI 2      ,25,X1,C1-XCK,Xưởng cơ khí                  
+1,B1,111B1,TN DTU CONG SUAT 2  ,30,E5,B1-112.1,PTN Điện tử Công suất         
+1,B6,101B6,Văn phòng khoa XD   ,40,TL,B6-101,PTN Thủy lực và CT Thuỷ       
+1,A4,306A4,PHONG HOP QUOC TE   ,0,QT,A4-306,                              
+1,B2,105B2A,PTN MAY & TBI       ,25,MB,B2-105A,PTN Máy và TBị                
+1,B2,105B2B,PTN MAY & TBI       ,0,MB,B2-105B,PTN Máy và TBị                
+1,B10,302B10,PHONG TN VAT LY (VP),40,V9,B10-302,P/TN B10-302 - Việt-Pháp      
+1,B10,306B10,TN DIEN DONG HOC VP ,25,DX,B10-306,TN DIEN DONG HOC VP           
+1,C4,103C4,PTN VAT LIEU        ,0,DZ,C4-103,                              
+1,,HANG10,HANGOUT O NHA       ,130,AH,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+1,,HANG11,HANGOUT O NHA       ,130,AH,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+1,,HANG12,HANGOUT O NHA       ,130,AH,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+1,,HANG13,HANGOUT O NHA       ,130,AH,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+1,,HANG15,HANGOUT O NHA       ,130,AH,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+1,,HANG16,HANGOUT O NHA       ,130,AH,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+1,,HANG17,HANGOUT O NHA       ,130,AH,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+1,,HANG18,HANGOUT O NHA       ,130,AH,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+1,,HANG19,HANGOUT O NHA       ,130,AH,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+1,,HANG20,HANGOUT O NHA       ,130,AH,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+1,,HANG21,HANGOUT O NHA       ,130,AH,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+1,,HANG22,HANGOUT O NHA       ,130,AH,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+1,,HANG23,HANGOUT O NHA       ,130,AH,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+1,,HANG24,HANGOUT O NHA       ,130,AH,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+1,,HANG25,HANGOUT O NHA       ,130,AH,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+1,,HANG26,HANGOUT O NHA       ,130,AH,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+1,C6,105C6,PTN TRONG DIEM      ,40,F2,C6-105,PTN TRONG DIEM                
+1,B2,401AB2,PTN HOA DAI CUONG   ,36,VC,B2-401A,PTN Hoá đại cương             
+1,B2,306B2,PTN CAM QUAN        ,20,HC,B2-306,PTN Cảm quan                  
+1,A5,107A5,PHONG HOC SO        ,50,GH,A5-107,Phòng học số                  
+1,,HANG70,HANGOUT O NHA       ,130,AH,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+1,,HANG71,HANGOUT O NHA       ,130,AH,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+1,,HANG72,HANGOUT O NHA       ,130,AH,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+1,,HANG73,HANGOUT O NHA       ,130,AH,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+1,C4,203C4,PTN VAT LIEU        ,30,DZ,C4-203,                              
+1,C2,PTTDT3,PHONGTT DIENTU 3    ,30,9M,C2-PTTDT3,Phòng TT điện tử              
+1,,HANG01,HANGOUT O NHA       ,130,AH,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+1,,HANG02,HANGOUT O NHA       ,130,AH,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+1,B6,201B6A,PTN VAT LY PTNLY    ,40,LY,B6-201A,PTN Vật lý B6-201A            
+1,A4,201A4,PHONG DAO TAO       ,60,A4,,                              
+1,C1,107C1,XUONG CO KHI IUT    ,30,B7,C1-107B,Xưởng cơ khí IUT              
+1,C1,107BC1,XUONG CO KHI IUT    ,30,B8,C1-107B2,Xưởng cơ khí IUT              
+1,C3,103C3,PTN KIM LOAI BOT    ,15,N7,C3-103,PTN kim loại bột              
+1,C3,104C3,PTN HOA HOC POLYME  ,30,N8,C3-104,PTN hóa học Polyme            
+1,C5,103C5,TN KY THUAT HK      ,0,HK,C5-101,PTN KThuật Hàng không         
+1,B1,119B1,PTH Kỹ năng sáng tạo,0,ST,119B1,                              
+1,B3,208B3,p.109 chuyen sang   ,30,SC,B3-208,                              
+1,C5,309C5,PTN BM TAU THUY     ,40,BI,C5-309,PTN BO MON TAU THUY           
+1,B2,201AB2,PTN BM MAY TB       ,20,B9,B2-201A,PTN bộ môn thiết bị           
+1,NT,CTHAN3,PHONG THI CAO THANG ,80,CT,DP-CAOTHANG,PHONG THI CAO THANG           
+1,NT,CTHAN4,PHONG THI CAO THANG ,80,CT,DP-CAOTHANG,PHONG THI CAO THANG           
+1,NT,CTHAN5,PHONG THI CAO THANG ,90,CT,C.THANG,                              
+1,NT,HOBOI,HO BOI TKK          ,100,HB,HOBOI LY THUONG KIET,HO BOI LY THUONG KIET         
+1,C3,109C33,PTN KThuật Giao Thôg,25,GT,C3-109.3,PTN KThuật Giao Thôg          
+1,C3,109C34,PTN KThuật Giao Thôg,25,GT,C3-109.4,PTN KThuật Giao Thôg          
+1,C1,106BC1,XUONG KHI NEN IUT   ,30,KN,C1-106B,Xưởng khí nén                 
+1,B7,102B7,PTN CARE            ,20,CA,B7-102,PTN care                      
+1,B6,100B6,PTN TAI NGUYEN NUOC ,25,TM,B6-100,PTN tài nguyên nước           
+1,B6,203B6,PTN BIM LAB         ,30,BM,B6-203,PTN BIM LAB                   
+1,A5,HTA5,HOI TRUONG A5       ,600,A5,A5-HTA5,Hội trường A5                 
+1,C6,505C6,PTN KY THUAT MY PHAM,50,MP,C6-505,                              
+1,B5,B5-2,PTN CN NHIEU(ME2014),30,CZ,B5-001,PTN Bộ môn CN Nhiệt           
+1,B5,B5-3,PTN CN NHIEU(ME2014),30,CY,B5-001,PTN Bộ môn CN Nhiệt           
+1,C1,201LC1,PTN LOGISTICS       ,20,LG,C1-201L,PTN Logistics                 
+1,C6,509C6,PHONG MAY TINH      ,36,TH,C6-509,P. Thực hành Máy tính C6      
+1,C6,102C6,PHONG MAY TINH      ,40,TH,C6-102,P. Thực hành Máy tính C6      
+1,B4,HTB4,HOI TRUONG NHA B4   ,0,,B4-HTB4,HOI TRUONG NHA B4             
+1,C1,PTNGAH,PTN CN TAO HINH XLVL,30,TC,C1-PTNGAH,PTN CN tạo hình và XLVL       
+1,C1,110BC1,XUONG CO KHI IUT2   ,25,U3,C1-110B,Xưởng cơ khí 2 - IUT          
+1,C5A,404C5,                    ,50,QT,C5-404,P/học C5-404                  
+1,B1,101B1,PTN TAM             ,22,HI,B1-101,PTN TAM                       
+1,B2,401B2,PTN HOA DUOC        ,20,V6,B2-401,PTN Hoá dược                  
+1,B2,101B2,PTN CONG NGHE TPHAM ,18,CH,B2-101,PHONG THI NGHIEM CNTP         
+1,C6,105DC6,PHONG THI NGHIEM    ,40,,C6-105D,Phòng thí nghiệm trọng điểm   
+1,PDA,PDAMHM,PHONG DO AN MON HOC ,80,.,------,PHONG ĐAMH                    
+1,PDA,PDAMHN,PHONG DO AN MON HOC ,80,.,------,PHONG ĐAMH                    
+1,PDA,PDAMHP,PHONG DO AN MON HOC ,80,.,------,PHONG ĐAMH                    
+1,PDA,PDAMHQ,PHONG DO AN MON HOC ,80,.,------,PHONG ĐAMH                    
+1,PDA,PDAMHR,PHONG DO AN MON HOC ,80,.,------,PHONG ĐAMH                    
+1,C5,HTC5,Phong giang duong   ,150,GD,C5-HOITRUONG,PHONG GIANG DUONG             
+1,C6,508C6,PHONG MAY TINH      ,30,TH,C6-509,P. Thực hành Máy tính C6      
+2,CS2,TTTRDL,SAN TRUONG          ,0,HD,CS2-TRDL,Sân trường - CS2              
+2,CS2,TTTR2L,SAN TRUONG          ,50,HD,CS2-TR2L,Sân trường - CS2              
+2,CS2,TTTR3L,SAN TRUONG          ,50,HD,CS2-TR3L,Sân trường - CS2              
+2,CS2,TTTR4L,SAN TRUONG          ,50,HD,CS2-TR4L,Sân trường - CS2              
+2,CS2,TTTR5L,SAN TRUONG          ,50,HD,CS2-TR5L,Sân trường - CS2              
+2,H1A,102H1,                    ,93,LH,H1-102,P/học H1-102                  
+2,H1A,103H1,                    ,90,LH,H1-103,P/học H1-103                  
+2,H1A,101H1,                    ,138,LH,H1-101,P/học H1-101                  
+2,H1A,104H1,                    ,138,LH,H1-104,P/học H1-104                  
+2,H1B,202H1,                    ,32,LH,H1-202,P/học H1-202                  
+2,H1B,203H1,                    ,32,LH,H1-203,P/học H1-203                  
+2,H1B,201H1,                    ,48,LH,H1-201,P/học H1-201                  
+2,H1B,204H1,                    ,129,LH,H1-204,P/học H1-204                  
+2,H1B,210H1,                    ,126,LH,H1-210,P/học H1-210                  
+2,H1B,211H1,                    ,126,LH,H1-211,P/học H1-211                  
+2,H1B,212H1,                    ,126,LH,H1-212,P/học H1-212                  
+2,H1B,213H1,                    ,126,LH,H1-213,P/học H1-213                  
+2,H1C,302H1,                    ,0,LH,H1-302,P/học H1-302                  
+2,H1C,303H1,                    ,0,LH,H1-303,P/học H1-303                  
+2,H1C,301H1,                    ,0,LH,H1-301,P/học H1-301                  
+2,H1C,304H1,                    ,0,LH,H1-304,P/học H1-304                  
+2,H1C,305H1,                    ,48,LH,H1-305,P/học H1-305                  
+2,H1C,306H1,                    ,48,LH,H1-306,P/học H1-306                  
+2,H1C,308H1,                    ,48,LH,H1-308,P/học H1-308                  
+2,H1C,309H1,PHONG HOC           ,48,LH,H1-309,P/học H1-309                  
+2,H1C,307H1,                    ,135,LH,H1-307,                              
+2,H1D,401H1,                    ,126,LH,H1-401,P/học H1-401                  
+2,H1D,404H1,                    ,126,LH,H1-404,P/học H1-404                  
+2,H1D,GDH1,                    ,352,HG,H1-GDH1,Giảng đường H1                
+2,H1D,405H1,                    ,120,LH,H1-405,Phòng tự học H1-405           
+2,H1D,403H1,                    ,90,LH,H1-403,P/học H1-403                  
+2,H1E,603H1,PTN LY CS2          ,78,HL,H1-603,Phòng tự học H1-603           
+2,H1E,601H1,PTN LY CS2          ,78,HL,H1-601,PTN Vật Lý - CS2 H1-601       
+2,H1E,602H1,PTN LY CS2          ,78,HL,H1-602,PTN Vật Lý - CS2 H1-602       
+2,H1E,501H1,PTN HOA CS2         ,40,HH,H1-501,PTN Hoá - CS2 H1-501          
+2,H1E,502H1,PTN HOA CS2         ,36,HH,H1-502,PTN Hoá - CS2 H1-502          
+2,H1E,503H1,PTN HOA CS2         ,36,HH,H1-503,PTN Hoá - CS2 H1-503          
+2,H1E,504H1,PTN HOA CS2         ,40,HH,H1-504,PTN Hoá - CS2 H1-504          
+2,H1F,701H1,                    ,60,K3,H1-701,P/học 701H1 - BKEnglish       
+2,H1G,801H1,                    ,66,LH,H1-801,P/học H1-801 - BKEnglish      
+2,H1G,808H1,                    ,0,LH,H1-808,P/học H1-808 - BKEnglish      
+2,H1G,802H1,                    ,106,LH,H1-802,P/học H1-802 - BKEnglish      
+2,H1G,803H1,GOP CHUNG 801H1     ,106,LH,H1-803,P/học H1-803 - BKEnglish      
+2,H1G,804H1,GOP CHUNG 801H1     ,66,LH,H1-804,P/học H1-804 - BKEnglish      
+2,H1G,805H1,                    ,106,LH,H1-805,P/học H1-805 - BKEnglish      
+2,H1G,806H1,GOP CHUNG 805H1     ,0,HN,H1-806,P/học H1-806 - BKEnglish      
+2,H1G,807H1,GOP CHUNG 805H1     ,0,HN,H1-807,P/học H1-807 - BKEnglish      
+2,H1G,809H1,                    ,0,LH,H1-809,P/học H1-809 - BKEnglish      
+2,H1G,811H1,GOP CHUNG 809H1     ,0,HN,H1-811,P/học H1-811 - BKEnglish      
+2,H2,503H2,HOA THAT LON        ,55,KI,H2-503,Phòng Họa thất lớn            
+2,H2,502H2,HOA THAT NHO        ,70,KI,H2-502,Phòng Họa thất nhỏ            
+2,H2,702H2,PTN VI SVAT KT MTRG ,30,OM,H2-702,PTN Vi SV KThuật MTr          
+2,H2,701H2,P. TN DOC HOC MT    ,30,M3,H2-701,PTN Độc học môi trường        
+2,H2,101H2,PTN SILICAT         ,30,VL,H2-101,PTN Silicat                   
+2,H2,102H2,PTN POLYME          ,35,I3,H2-102,PTN Polyme H2-102             
+2,H2A,201H2,                    ,156,LH,H2-201,P/học H2-201                  
+2,H2A,206H2,                    ,156,LH,H2-206,P/học H2-206                  
+2,H2A,202H2,                    ,117,LH,H2-202,P/học H2-202                  
+2,H2A,205H2,                    ,117,LH,H2-205,P/học H2-205                  
+2,H2A,207H2,                    ,135,LH,H2-207,Phòng tự học H2-207           
+2,H2B,301H2,                    ,156,LH,H2-301,P/học H2-301                  
+2,H2B,306H2,                    ,156,LH,H2-306,P/học H2-306                  
+2,H2B,302H2,                    ,117,LH,H2-302,P/học H2-302                  
+2,H2B,304H2,                    ,93,LH,H2-304,P/học H2-304                  
+2,H2B,305H2,                    ,63,LH,H2-305,P/học H2-305                  
+2,H2B,307H2,                    ,117,LH,H2-307,Phòng tự học H2-307           
+2,H2C,401H2,                    ,156,LH,H2-401,P/học H2-401                  
+2,H2C,406H2,                    ,156,LH,H2-406,P/học H2-406                  
+2,H2C,403H2,                    ,93,LH,H2-403,P/học H2-403                  
+2,H2C,404H2,                    ,93,LH,H2-404,P/học H2-404                  
+2,H2C,402H2,                    ,63,LH,H2-402,P/học H2-402                  
+2,H2C,405H2,                    ,63,LH,H2-405,P/học H2-405                  
+2,H2C,407H2,                    ,84,LH,H2-407,Phòng tự học H2-407           
+2,H2D,506H2,PHONG CHUYEN DE KT  ,100,BO,H2-506,P/học H2-506                  
+2,H2D,505H2,PHONG CHUYEN DE KT  ,100,BO,H2-505,Phòng chuyên đề KT            
+2,H2D,501H2,PHONG KIEN TRUC     ,70,KI,H2-501,Phòng kiến trúc               
+2,H2E,805H2,TN HOA KT MTRUONG   ,40,M2,H2-805,PTN Hóa KT MTrường H2-805     
+2,H2E,804H2,TN HOA KT MTRUONG   ,40,M2,H2-804,PTN Hóa KThuật MTrường        
+2,H6,610H6,KHONG XAI CHUYEN 605,0,G€,H6-610,PTN Hệ Thống Số MTính         
+2,H6,603H6,PHONG MAY TINH      ,40,CI,H6-603,Phòng Thực hành Máy tính H6-60
+2,H6,604H6,PHONG MAY TINH      ,40,CI,H6-604,Phòng Thực hành Máy tính H6-60
+2,H6A,109H6,PHONG HOC           ,80,LH,H6-109,P/học H6-109                  
+2,H6A,110H6,PHONG HOC           ,80,LH,H6-110,P/học H6-110                  
+2,H6A,112H6,PHONG HOC           ,80,LH,H6-112,P/học H6-112                  
+2,H6A,113H6,PHONG HOC           ,129,LH,H6-113,P/học H6-113                  
+2,H6A,114H6,PHONG HOC           ,123,DB,H6-114,P/học H6-114                  
+2,H6B,205H6,PHONG HOC           ,117,LH,H6-205,P/học H6-205                  
+2,H6B,206H6,PHONG HOC           ,80,LH,H6-206,P/học H6-206                  
+2,H6B,210H6,PHONG HOC           ,80,LH,H6-210,P/học H6-210                  
+2,H6B,211H6,PHONG HOC           ,126,LH,H6-211,P/học H6-211                  
+2,H6B,212H6,PHONG HOC           ,80,LH,H6-212,P/học H6-212                  
+2,H6B,213H6,PHONG HOC           ,80,LH,H6-213,P/học H6-213                  
+2,H6B,214H6,PHONG HOC           ,80,LH,H6-214,P/học H6-214                  
+2,H6B,208H6,PHONG HOC           ,117,LH,H6-208,P/học H6-208                  
+2,H6C,305H6,PHONG HOC           ,129,LH,H6-305,P/học H6-305                  
+2,H6C,306H6,PHONG HOC           ,80,LH,H6-306,P/học H6-306                  
+2,H6C,310H6,PHONG HOC           ,80,LH,H6-310,P/học H6-310                  
+2,H6C,311H6,PHONG HOC           ,135,LH,H6-311,P/học H6-311                  
+2,H6C,312H6,PHONG HOC           ,80,LH,H6-312,P/học H6-312                  
+2,H6C,313H6,PHONG HOC           ,80,LH,H6-313,P/học H6-313                  
+2,H6D,411H6,PHONG HOC           ,80,LH,H6-411,P/học H6-411                  
+2,H6D,412H6,PHONG HOC           ,123,LH,H6-412,P/học H6-412                  
+2,H6D,413H6,PHONG HOC           ,80,LH,H6-413,P/học H6-413                  
+2,H6D,414H6,PHONG HOC           ,80,LH,H6-414,P/học H6-414                  
+2,H6D,415H6,PHONG HOC           ,80,LH,H6-415,P/học H6-415                  
+2,H6E,GDH6,G/DUONG H6 (TANG 6) ,318,HG,H6-GDH6,Giảng đường H6 (Tầng 6)       
+2,HD,SANLT2,SAN TRUONG CS2      ,68,SL,CS2-NHATHIDAU-SAN2,Sân thể thao - Nhà T/Đấu (CS2)
+2,HD,SANLT3,SAN TRUONG CS2      ,68,SL,CS2-NHATHIDAU-SAN3,Sân thể thao - Nhà T/Đấu (CS2)
+2,HD,SANLT7,SAN TRUONG CS2      ,60,SL,CS2-NHATHIDAU-SAN7,Sân thể thao - Nhà T/Đấu (CS2)
+2,HD,SANLT8,SAN TRUONG CS2      ,60,SL,CS2-NHATHIDAU-SAN8,Sân thể thao - Nhà T/Đấu (CS2)
+2,HS,SANLT1,SAN TRUONG CS2      ,68,SL,CS2-NHATHIDAU-SAN1,Sân thể thao - Nhà T/Đấu (CS2)
+2,HS,SANLT4,SAN TRUONG CS2      ,60,SL,CS2-NHATHIDAU-SAN4,Sân thể thao - Nhà T/Đấu (CS2)
+2,HS,SANLT5,SAN TRUONG CS2      ,60,SL,CS2-NHATHIDAU-SAN5,Sân thể thao - Nhà T/Đấu (CS2)
+2,HS,SANLT6,SAN TRUONG CS2      ,60,SL,CS2-NHATHIDAU-SAN6,Sân thể thao - Nhà T/Đấu (CS2)
+2,H6,402H6,PHONG HOC           ,30,V3,H6-402,PTN Xử lý số TH               
+2,H6,014H6,"THUC TAP DIEN 1,2   ",0,T1,H6-014,Thực tập điện 1 H6-014        
+2,H6,3032H6,PTN(EE1010&EE2040)  ,30,TB,H6-303.2,PTN Vi xử lý                  
+2,H6,102H6,PTN CO SO TU DONG   ,30,T3,H6-102,PTN Cơ sở Tự động             
+2,H6,002H6,PTN CS DIEN TU CS   ,30,T4,H6-002,PTN CS Điện tử CS             
+2,H6,003H6,PTN CS KY THUAT DIEN,48,T7,H6-003,PTN CS Kỹ thuật điện          
+2,H2,104H2,PTN POLYME          ,60,PO,H2-104,PTN Polyme H2-104             
+2,H6F,605H6,TN HE THONG SO      ,40,N6,H6-605,TH Kỹ thuật lập trình H6-605  
+2,H6,601H6,TH KT LAP TRINH     ,40,N5,H6-601,Phòng Thực hành MT H6-601     
+2,H6F,707H6,PHONG MAY TINH      ,40,CI,H6-707,TH Kỹ thuật lập trình H6-707  
+2,H6E,501H6,TH NHAP MON KT (DD) ,50,ND,H6-501,TH Nhập môn KT (DD)           
+2,H6,3031H6,PTN KY THUAT SO     ,36,T6,H6-303.1,PTN Kỹ thuật số               
+2,H6,203H6,PTN MDT(TACH 2 PHONG,0,T8,H6-203,PTN Mạch điện tử              
+2,H2,007H2,PTN VAT LY KT(CLC)  ,35,CL,H2-007,PTN Vật lý KT (CLC)           
+2,H2,107H2,PTN TIA X           ,30,NX,H2-107,PTN Tia X                     
+2,H2,005H2,PTN CAO SU          ,30,CS,H2-005,PTN Cao su                    
+2,H2,105H2,PTN VAT LIEU        ,30,N1,H2-105,PTN Vật liệu                  
+2,H6,708H6,PHONG MAY TINH      ,40,CI,H6-708,Phòng Thực hành Máy tính H6-70
+2,H6,702H6,PHONG MAY TINH      ,40,HM,H6-702,Phòng Thực hành Máy tính H6-70
+2,H6,703H6,PHONG MAY TINH      ,40,HM,H6-703,Phòng Thực hành Máy tính H6-70
+2,H2,709H2,PTN MOI TRUONG      ,30,NO,H2-709,PTN Môi trường H2-709         
+2,H1,212BKE,PHONG NGOAI NGU     ,40,HN,BKE-212,                              
+2,H2E,807H2,TN XU LY NUOC THAI  ,30,M5,H2-807,PTN Xử lý Nước thải           
+2,H2E,711H2,TN UNG DUNG GIS     ,40,M4,H2-711,PTN ứng dụng GIS              
+2,BKE,208BKE,PHONG NGOAI NGU     ,40,PH,BKE-208,P/học BKE-208 - BKEnglish     
+2,H6,202H6,PTN MACH VA DO CS2  ,30,O2,H6-202,PTN Mạch và Đo CS2            
+2,H6,015H6,"THUC TAP DIEN 1,2   ",0,T1,H6-015,Thực tập điện 1 H6-015        
+2,H1,710H1,PTN HE THONG CN     ,40,H#,H1-710,PTN HE THONG CN CHANGE DAY HOC
+2,H1,703H1,PHONG HOC           ,84,LH,H1-703,BO SUNG TU 191                
+2,H6,308H6,PHONG HOC           ,144,LH,H6-308,BO SUNG TU 191                
+2,NN,209BKE,PHONG NGOAI NGU     ,40,NN,BKE-209,PHONG NGOAI NGU               
+2,HD,SANLTA,SAN TRUONG CS2      ,60,SL,CS2-NHATHIDAU-SANA,Sân thể thao - Nhà T/Đấu (CS2)
+2,HD,SANLTB,SAN TRUONG CS2      ,60,SL,CS2-NHATHIDAU-SANB,Sân thể thao - Nhà T/Đấu (CS2)
+2,HD,SANLTC,SAN TRUONG CS2      ,60,SL,CS2-NHATHIDAU-SANC,Sân thể thao - Nhà T/Đấu (CS2)
+2,HD,SANLTD,SAN TRUONG CS2      ,60,SL,CS2-NHATHIDAU-SAND,Sân thể thao - Nhà T/Đấu (CS2)
+2,HD,SANLTE,SAN TRUONG CS2      ,60,SL,CS2-NHATHIDAU-SANE,Sân thể thao - Nhà T/Đấu (CS2)
+2,HD,SANLTF,SAN TRUONG CS2      ,60,SL,CS2-NHATHIDAU-SANF,Sân thể thao - Nhà T/Đấu (CS2)
+2,HD,SANLTG,SAN TRUONG CS2      ,60,SL,CS2-NHATHIDAU-SANG,Sân thể thao - Nhà T/Đấu (CS2)
+2,HD,SANLTH,SAN TRUONG CS2      ,60,SL,CS2-NHATHIDAU-SANH,Sân thể thao - Nhà T/Đấu (CS2)
+2,HD,SANLTI,SAN TRUONG CS2      ,60,SL,CS2-NHATHIDAU-SANI,Sân thể thao - Nhà T/Đấu (CS2)
+2,HD,SANLTJ,SAN TRUONG CS2      ,60,SL,CS2-NHATHIDAU-SANJ,Sân thể thao - Nhà T/Đấu (CS2)
+2,HD,SANLTK,SAN TRUONG CS2      ,60,SL,CS2-NHATHIDAU-SANK,Sân thể thao - Nhà T/Đấu (CS2)
+2,H6F,701H6,PHONG MAY TINH      ,40,HM,H6-701,TH Kỹ thuật lập trình H6-701  
+2,H1,310H1,PHONG HOC           ,66,LH,H1-310,Phòng Học                     
+2,H6,506H6,PHONG HOC           ,102,LH,H6-506,P/học H6-506                  
+2,H6,410H6,KHONG XAI           ,0,LH,H6-410,P/học H6-410                  
+2,H6,512H6,PHONG HOC           ,105,LH,H6-512,P/học H6-512                  
+2,H6,514H6,PHONG HOC           ,108,LH,H6-514,P/học H6-514                  
+2,H6,516H6,PHONG HOC           ,114,LH,H6-516,P/học H6-516                  
+2,HD,SANLT9,SAN TRUONG CS2      ,60,SL,CS2-NHATHIDAU-SANK,Sân thể thao - Nhà T/Đấu (CS2)
+2,,HANGOU,HANGOUT O NHA       ,130,HA,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+2,H6,510H6,PHONG HOC           ,102,LH,H6-510,P/học H6-510                  
+2,H3,202H3,PHONGTN THIET KE MAY,45,TK,H3-202,PTN THIET KE MAY              
+2,H3,201H3,PHONG HOC           ,142,LH,H3-201,PHONG HOC                     
+2,H3,102H3,PHONG HOC           ,68,LH,H3-102,PHONG HOC                     
+2,H3,103H3,PHONG HOC           ,68,LH,H3-103,PHONG HOC                     
+2,H3,104H3,PHONG HOC           ,68,LH,H3-104,PHONG HOC                     
+2,H3,107H3,PHONG HOC           ,106,LH,H3-107,PHONG HOC                     
+2,H3,206H3,PHONG HOC           ,68,LH,H3-206,PHONG HOC                     
+2,H3,207H3,PHONG HOC           ,68,LH,H3-207,PHONG HOC                     
+2,H3,205H3,PHONG HOC           ,106,LH,H3-205,PHONG HOC                     
+2,H3,203H3,PTN CO HOC MAY      ,40,CM,H3-203,PTN CO HOC MAY                
+2,,HANGO1,HANGOUT O NHA       ,130,HA,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+2,,HANGO2,HANGOUT O NHA       ,130,HA,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+2,,HANGO3,HANGOUT O NHA       ,130,HA,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+2,,HANGO4,HANGOUT O NHA       ,130,HA,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+2,,HANGO5,HANGOUT O NHA       ,130,HA,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+2,,HANGO6,HANGOUT O NHA       ,130,HA,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+2,,HANGO7,HANGOUT O NHA       ,130,HA,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+2,,HANGO8,HANGOUT O NHA       ,130,HA,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+2,,HANGO9,HANGOUT O NHA       ,130,HA,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+2,H1,312H1,PHONG HOC           ,66,LH,H1-312,Phòng Học                     
+2,H1,106H1,PHONG HOC           ,66,LH,H1-106,Phòng Học                     
+2,H6,504H6,PHONG HOC           ,106,LH,H6-504,Phòng Học                     
+2,H3,101H3,PHONG HOC           ,68,LH,H3-101,PHONG HOC                     
+2,H3,301H3,PHONG HOC           ,142,LH,H3-301,PHONG HOC                     
+2,H3,302H3,PHONG HOC           ,68,LH,H3-302,PHONG HOC                     
+2,H3,303H3,PHONG HOC           ,88,LH,H3-303,PHONG HOC                     
+2,H3,304H3,PHONG HOC           ,88,LH,H3-304,PHONG HOC                     
+2,H3,305H3,PHONG HOC           ,68,LH,H3-305,PHONG HOC                     
+2,H3,306H3,PHONG HOC           ,142,LH,H3-306,PHONG HOC                     
+2,H3,401H3,PHONG HOC           ,142,LH,H3-401,PHONG HOC                     
+2,H3,402H3,PHONG HOC           ,68,LH,H3-402,PHONG HOC                     
+2,H3,403H3,PHONG HOC           ,88,LH,H3-403,PHONG HOC                     
+2,H3,404H3,PHONG HOC           ,88,LH,H3-404,PHONG HOC                     
+2,H3,405H3,PHONG HOC           ,68,LH,H3-405,PHONG HOC                     
+2,H3,406H3,PHONG HOC           ,142,LH,H3-406,PHONG HOC                     
+2,H3,501H3,PHONG HOC           ,142,LH,H3-501,PHONG HOC                     
+2,H3,502H3,PHONG HOC           ,68,LH,H3-502,PHONG HOC                     
+2,H3,503H3,PHONG HOC           ,88,LH,H3-503,PHONG HOC                     
+2,H3,504H3,PHONG HOC           ,88,LH,H3-504,PHONG HOC                     
+2,H3,505H3,PHONG HOC           ,68,LH,H3-505,PHONG HOC                     
+2,H3,506H3,PHONG HOC           ,142,LH,H3-506,PHONG HOC                     
+2,H6,006H6,PTN NHAP MON EE1002 ,40,NM,H6-006,PTN NHAP MON EE1002           
+2,,HANG95,HANGOUT O NHA       ,130,HA,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+2,,HANG86,HANGOUT O NHA       ,130,HA,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+2,,HANG87,HANGOUT O NHA       ,130,HA,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+2,,HANG88,HANGOUT O NHA       ,130,HA,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+2,,HANG89,HANGOUT O NHA       ,130,HA,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+2,,HANG90,HANGOUT O NHA       ,130,HA,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+2,,HANG91,HANGOUT O NHA       ,130,HA,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+2,,HANG92,HANGOUT O NHA       ,130,HA,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+2,,HANG93,HANGOUT O NHA       ,130,HA,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+2,,HANG94,HANGOUT O NHA       ,130,HA,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+2,,HANG74,HANGOUT O NHA       ,130,HA,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+2,,HANG75,HANGOUT O NHA       ,130,HA,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+2,,HANG76,HANGOUT O NHA       ,130,HA,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+2,,HANG77,HANGOUT O NHA       ,130,HA,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+2,,HANG78,HANGOUT O NHA       ,130,HA,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+2,,HANG79,HANGOUT O NHA       ,130,HA,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+2,,HANG80,HANGOUT O NHA       ,130,HA,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+2,,HANG81,HANGOUT O NHA       ,130,HA,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+2,,HANG82,HANGOUT O NHA       ,130,HA,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+2,,HANG83,HANGOUT O NHA       ,130,HA,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+2,,HANG84,HANGOUT O NHA       ,130,HA,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+2,,HANG85,HANGOUT O NHA       ,130,HA,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+2,,HANGLT,HANGOUT O NHA       ,120,HA,HANGOUT_TUONGTAC,hangout tương tác ở nhà       
+2,H2,802H2,PTN VI LUONG-EN3006 ,30,DA,H2-802,                              
+2,H6,A14H6,THUC TAP DIEN 1     ,0,T1,H6-14A,Thực tập điện 1 H6-A14        
+2,H3,005H3,PTN SINH HOC PHAN TU,30,LA,H3-005,PTN SINH HOC PHAN TU          
+2,H3,007H3,PTN SINH HOC        ,30,LO,H3-007,PTN SINH HOC                  
+2,H3,001H3A,PTN BO MON MTB      ,35,B1,H3-001A,PTN MAY THIET BI              
+2,H3,001H3B,PTN BO MON MTB      ,0,B1,H3-001B,PTN MAY THIET BI              
+2,H3,002H3A,PTN BO MON MTB      ,30,B3,H3-002A,PTN MAY THIET BI              
+2,H3,002H3B,PTN BO MON MTB      ,0,B3,H3-002B,PTN MAY THIET BI              
+2,H2,705H2,VAN PHONG KHOA MO   ,30,B5,H2-705,Văn phòng Khoa môi trường     
+2,013,000H2,PTN VAT LIEU        ,0,B6,H2-000,PTN VAT LIEU                  
+2,H6,301H6,PTN VI XU LY        ,30,T2,H6-301,                              
+2,H6,4031H6,PTN TRUYEN SO LIEU  ,30,SA,H6-4031,PTN Truyền Số Liệu            
+2,NT,TTTDTT,TT TDTT             ,100,SL,TT THE DUC THE THAO,TT THE DUC THE THAO           
+2,H2,004H2,PTN CN CAO SU       ,30,B6,H2-004,PTN công nghệ cao su          
+2,H6,014AH6,"THUC TAP DIEN 1,2   ",0,T1,H6-014A,Thực tập điện 1 H6-014A       
+2,NT,TTGDQP,TT GDQP             ,100,SL,TT GIAO DUC QP-AN,TT GIAO DUC QP-AN             
+2,NT,HTTCD,H.TR TRAN CHI DAO   ,0,,DHQG-HT.TRANCHIDAO,DHQG-HOI TRUONG TRAN CHI DAO  
+2,PDA,PDAMHF,PHONG DO AN MON HOC ,80,..,------,PHONG ĐAMH                    
+2,PDA,PDAMHG,PHONG DO AN MON HOC ,80,..,------,PHONG ĐAMH                    
+2,PDA,PDAMHH,PHONG DO AN MON HOC ,80,..,------,PHONG ĐAMH                    
+2,PDA,PDAMHI,PHONG DO AN MON HOC ,80,..,------,PHONG ĐAMH                    
+2,PDA,PDAMHK,PHONG DO AN MON HOC ,80,..,------,PHONG ĐAMH                    
+2,PDA,PDAMHL,PHONG DO AN MON HOC ,80,..,------,PHONG ĐAMH                    
+2,H6D,811H6,PHONG HOC           ,174,LH,H6-811,P/học H6-811                  
+2,H6D,201H6,PHONG HOC           ,120,LH,H6-201,P/học H6-201                  
+2,H6D,405H6,PHONG HOC           ,120,LH,H6-405,P/học H6-405                  
+2,H6D,802H6,PHONG HOC           ,150,LH,H6-802,P/học H6-802                  
+2,H6D,810H6,PHONG HOC           ,156,LH,H6-810,P/học H6-810                  
+2,H6,016H6,PTN NHAP MON EE1002 ,40,NM,H6-016,PTN NHAP MON EE1002           
+2,H6,203AH6,PTN MDT(TACH 2 PHONG,24,T8,H6-203A,PTN Mạch điện tử              
+2,H6,203BH6,PTN MDT(TACH 2 PHONG,24,T8,H6-203B,PTN Mạch điện tử              
+2,HD,SANLT,SAN TRUONG CS2      ,68,SL,CS2-NHATHIDAU-SAN2,Sân thể thao - Nhà T/Đấu (CS2)
+2,H1,708H1,PHONG TINH TOANCOHOC,30,AS,H1-708,PHONG THI NGHIEM              
+2,NT,HOBOI2,HO BOI THU DUC      ,100,HB,HOBOI KV THU DUC,HO BOI KHU VUC THU DUC        
+2,H6,4021H6,PTN MACH DIEN TU NC ,30,V4,H6-4021,PTN MACH dien tu NC           
+2,H3,011H3,PTN CN THUC PHAM 3  ,30,PC,H3-011,PHONG THI NGHIEM CNTP         
+2,H6,011H6,"THUC TAP DIEN 1,2   ",25,T1,H6-011,"Thực tập điện 1,2             "
+2,H6,012H6,"THUC TAP DIEN 1,2   ",25,T1,H6-012,"Thực tập điện 1,2             "
+2,H3,606H3,PHONG HOC           ,150,LH,H3-606,Phòng học                     
+2,H3,109H3,PHONG HOC           ,0,,H3-109,PHONG HOC                     
