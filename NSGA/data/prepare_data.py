@@ -4,6 +4,7 @@ from __future__ import annotations
 from collections import defaultdict
 from datetime import date
 from pathlib import Path
+import re
 from typing import Iterable
 
 import pandas as pd
@@ -76,7 +77,11 @@ def load_calendar(path: Path, track: str, semester_id: str) -> tuple[AcademicWee
         raise DataValidationError("calendar week must be unique within track/semester")
     result = []
     for r in selected.sort_values("week").to_dict("records"):
-        holidays = tuple(date.fromisoformat(v.strip()) for v in _text(r["holiday_dates"]).split(";") if v.strip())
+        holidays = tuple(
+            date.fromisoformat(value)
+            for raw in re.split(r"[,;]", _text(r["holiday_dates"]))
+            if (value := raw.strip())
+        )
         result.append(AcademicWeek(track, semester_id, _int(r["week"]), date.fromisoformat(_text(r["start_date"])), date.fromisoformat(_text(r["end_date"])), _bool(r["is_teaching"]), _bool(r["is_midterm"]), _bool(r["is_final"]), _bool(r["is_holiday"]), holidays, _text(r["notes"])))
     return tuple(result)
 
