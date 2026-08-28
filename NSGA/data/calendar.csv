@@ -1,0 +1,149 @@
+track,semester_id,week,start_date,end_date,is_teaching,is_midterm,is_final,is_holiday,holiday_dates,notes
+HK_CHINH,HK1,1,2025-08-18,2025-08-24,True,False,False,False,,
+HK_CHINH,HK1,2,2025-08-25,2025-08-31,True,False,False,False,,
+HK_CHINH,HK1,3,2025-09-01,2025-09-07,True,False,False,True,"2025-09-01,2025-09-02",
+HK_CHINH,HK1,4,2025-09-08,2025-09-14,True,False,False,False,,
+HK_CHINH,HK1,5,2025-09-15,2025-09-21,True,False,False,False,,
+HK_CHINH,HK1,6,2025-09-22,2025-09-28,True,False,False,False,,
+HK_CHINH,HK1,7,2025-09-29,2025-10-05,True,False,False,False,,Pb
+HK_CHINH,HK1,8,2025-10-06,2025-10-12,True,False,False,False,,Bv
+HK_CHINH,HK1,9,2025-10-13,2025-10-19,True,False,False,False,,
+HK_CHINH,HK1,10,2025-10-20,2025-10-26,True,True,False,False,,K
+HK_CHINH,HK1,11,2025-10-27,2025-11-02,True,False,False,False,,Tuan le KHCN (CN)
+HK_CHINH,HK1,12,2025-11-03,2025-11-09,True,False,False,False,,
+HK_CHINH,HK1,13,2025-11-10,2025-11-16,True,False,False,False,,
+HK_CHINH,HK1,14,2025-11-17,2025-11-23,True,False,False,False,,Le tot nghiep lan 2/2025
+HK_CHINH,HK1,15,2025-11-24,2025-11-30,True,False,False,False,,
+HK_CHINH,HK1,16,2025-12-01,2025-12-07,True,False,False,False,,
+HK_CHINH,HK1,17,2025-12-08,2025-12-14,True,False,False,False,,
+HK_CHINH,HK1,18,2025-12-15,2025-12-21,False,False,True,False,,"Th, Pb"
+HK_CHINH,HK1,19,2025-12-22,2025-12-28,False,False,True,False,,"Th, Pb"
+HK_CHINH,HK1,20,2025-12-29,2026-01-04,False,False,True,True,2026-01-01,"Th, Bv"
+HK_CHINH,HK1,21,2026-01-05,2026-01-11,True,False,False,False,,Bv
+HK_CHINH,HK2,22,2026-01-12,2026-01-18,True,False,False,False,,
+HK_CHINH,HK2,23,2026-01-19,2026-01-25,True,False,False,False,,
+HK_CHINH,HK2,24,2026-01-26,2026-02-01,True,False,False,False,,
+HK_CHINH,HK2,25,2026-02-02,2026-02-08,True,False,False,False,,
+HK_CHINH,HK2,26,2026-02-09,2026-02-15,False,False,False,True,,Nghi Tet Nguyen Dan
+HK_CHINH,HK2,27,2026-02-16,2026-02-22,False,False,False,True,,Nghi Tet Nguyen Dan
+HK_CHINH,HK2,28,2026-02-23,2026-03-01,True,False,False,False,,
+HK_CHINH,HK2,29,2026-03-02,2026-03-08,True,False,False,False,,
+HK_CHINH,HK2,30,2026-03-09,2026-03-15,True,False,False,False,,
+HK_CHINH,HK2,31,2026-03-16,2026-03-22,True,True,False,False,,K
+HK_CHINH,HK2,32,2026-03-23,2026-03-29,True,False,False,False,,
+HK_CHINH,HK2,33,2026-03-30,2026-04-05,True,False,False,False,,
+HK_CHINH,HK2,34,2026-04-06,2026-04-12,True,False,False,False,,
+HK_CHINH,HK2,35,2026-04-13,2026-04-19,True,False,False,False,,
+HK_CHINH,HK2,36,2026-04-20,2026-04-26,True,False,False,False,,Le tot nghiep lan 1/2026
+HK_CHINH,HK2,37,2026-04-27,2026-05-03,True,False,False,True,"2026-04-27,2026-04-30,2026-05-01",
+HK_CHINH,HK2,38,2026-05-04,2026-05-10,True,False,False,False,,
+HK_CHINH,HK2,39,2026-05-11,2026-05-17,True,False,False,False,,
+HK_CHINH,HK2,40,2026-05-18,2026-05-24,False,False,True,False,,"Th, Pb"
+HK_CHINH,HK2,41,2026-05-25,2026-05-31,False,False,True,False,,"Th, Pb"
+HK_CHINH,HK2,42,2026-06-01,2026-06-07,False,False,True,False,,"Th, Bv"
+HK_CHINH,HK2,43,2026-06-08,2026-06-14,True,False,False,False,,Bv
+HK_CHINH,HE,44,2026-06-15,2026-06-21,False,False,False,False,,TTNT
+HK_CHINH,HE,45,2026-06-22,2026-06-28,False,False,False,False,,TTNT
+HK_CHINH,HE,46,2026-06-29,2026-07-05,False,False,False,False,,TTNT
+HK_CHINH,HE,47,2026-07-06,2026-07-12,False,False,False,False,,TTNT
+HK_CHINH,HE,48,2026-07-13,2026-07-19,False,False,False,False,,TTNT
+HK_CHINH,HE,49,2026-07-20,2026-07-26,False,False,False,False,,TTNT
+HK_CHINH,HE,50,2026-07-27,2026-08-02,False,False,False,False,,TTNT
+HK_CHINH,HE,51,2026-08-03,2026-08-09,False,False,False,False,,TTNT
+HK_CHINH,HE,52,2026-08-10,2026-08-16,False,False,False,False,,TTNT
+HK_CHINH,HE,53,2026-08-17,2026-08-23,False,False,False,False,,Bv
+HK_CHINH,HE,54,2026-08-24,2026-08-30,False,False,False,False,,
+HK_HE,HE,44,2026-06-15,2026-06-21,True,False,False,False,,
+HK_HE,HE,45,2026-06-22,2026-06-28,True,False,False,False,,
+HK_HE,HE,46,2026-06-29,2026-07-05,True,False,False,False,,
+HK_HE,HE,47,2026-07-06,2026-07-12,True,False,False,False,,
+HK_HE,HE,48,2026-07-13,2026-07-19,True,True,False,False,,K
+HK_HE,HE,49,2026-07-20,2026-07-26,True,False,False,False,,
+HK_HE,HE,50,2026-07-27,2026-08-02,True,False,False,False,,
+HK_HE,HE,51,2026-08-03,2026-08-09,True,False,False,False,,
+HK_HE,HE,52,2026-08-10,2026-08-16,True,False,False,False,,
+HK_HE,HE,53,2026-08-17,2026-08-23,False,False,True,False,,Th
+HK_NGOAI_GIO,HK1,5,2025-09-15,2025-09-21,True,False,False,False,,
+HK_NGOAI_GIO,HK1,6,2025-09-22,2025-09-28,True,False,False,False,,
+HK_NGOAI_GIO,HK1,7,2025-09-29,2025-10-05,True,False,False,False,,
+HK_NGOAI_GIO,HK1,8,2025-10-06,2025-10-12,True,False,False,False,,
+HK_NGOAI_GIO,HK1,9,2025-10-13,2025-10-19,True,False,False,False,,
+HK_NGOAI_GIO,HK1,10,2025-10-20,2025-10-26,True,True,False,False,,K
+HK_NGOAI_GIO,HK1,11,2025-10-27,2025-11-02,True,False,False,False,,
+HK_NGOAI_GIO,HK1,12,2025-11-03,2025-11-09,True,False,False,False,,
+HK_NGOAI_GIO,HK1,13,2025-11-10,2025-11-16,True,False,False,False,,
+HK_NGOAI_GIO,HK1,14,2025-11-17,2025-11-23,True,False,False,False,,
+HK_NGOAI_GIO,HK1,15,2025-11-24,2025-11-30,True,False,False,False,,
+HK_NGOAI_GIO,HK1,16,2025-12-01,2025-12-07,True,False,False,False,,
+HK_NGOAI_GIO,HK1,17,2025-12-08,2025-12-14,True,False,False,False,,
+HK_NGOAI_GIO,HK1,18,2025-12-15,2025-12-21,False,False,True,False,,Th
+HK_NGOAI_GIO,HK1,19,2025-12-22,2025-12-28,False,False,True,False,,Th
+HK_NGOAI_GIO,HK2,24,2026-01-26,2026-02-01,True,False,False,False,,
+HK_NGOAI_GIO,HK2,25,2026-02-02,2026-02-08,True,False,False,False,,
+HK_NGOAI_GIO,HK2,26,2026-02-09,2026-02-15,False,False,False,True,,Nghi Tet Nguyen Dan
+HK_NGOAI_GIO,HK2,27,2026-02-16,2026-02-22,False,False,False,True,,Nghi Tet Nguyen Dan
+HK_NGOAI_GIO,HK2,28,2026-02-23,2026-03-01,True,False,False,False,,
+HK_NGOAI_GIO,HK2,29,2026-03-02,2026-03-08,True,False,False,False,,
+HK_NGOAI_GIO,HK2,30,2026-03-09,2026-03-15,True,False,False,False,,
+HK_NGOAI_GIO,HK2,31,2026-03-16,2026-03-22,True,True,False,False,,K
+HK_NGOAI_GIO,HK2,32,2026-03-23,2026-03-29,True,False,False,False,,
+HK_NGOAI_GIO,HK2,33,2026-03-30,2026-04-05,True,False,False,False,,
+HK_NGOAI_GIO,HK2,34,2026-04-06,2026-04-12,True,False,False,False,,
+HK_NGOAI_GIO,HK2,35,2026-04-13,2026-04-19,True,False,False,False,,
+HK_NGOAI_GIO,HK2,36,2026-04-20,2026-04-26,True,False,False,False,,
+HK_NGOAI_GIO,HK2,37,2026-04-27,2026-05-03,True,False,False,True,"2026-04-27,2026-04-30,2026-05-01",
+HK_NGOAI_GIO,HK2,38,2026-05-04,2026-05-10,True,False,False,False,,
+HK_NGOAI_GIO,HK2,39,2026-05-11,2026-05-17,False,False,True,False,,Th
+HK_NGOAI_GIO,HK2,40,2026-05-18,2026-05-24,False,False,True,False,,Th
+NAM_1,HK1,2,2025-08-25,2025-08-31,True,False,False,False,,
+NAM_1,HK1,3,2025-09-01,2025-09-07,True,False,False,True,"2025-09-01,2025-09-02",
+NAM_1,HK1,4,2025-09-08,2025-09-14,True,False,False,False,,
+NAM_1,HK1,5,2025-09-15,2025-09-21,True,False,False,False,,
+NAM_1,HK1,6,2025-09-22,2025-09-28,True,False,False,False,,Td (*)
+NAM_1,HK1,7,2025-09-29,2025-10-05,True,False,False,False,,
+NAM_1,HK1,8,2025-10-06,2025-10-12,True,False,False,False,,
+NAM_1,HK1,9,2025-10-13,2025-10-19,True,False,False,False,,
+NAM_1,HK1,10,2025-10-20,2025-10-26,True,True,False,False,,K
+NAM_1,HK1,11,2025-10-27,2025-11-02,True,False,False,False,,Tuan le KHCN (CN)
+NAM_1,HK1,12,2025-11-03,2025-11-09,True,False,False,False,,
+NAM_1,HK1,13,2025-11-10,2025-11-16,True,False,False,False,,
+NAM_1,HK1,14,2025-11-17,2025-11-23,True,False,False,False,,
+NAM_1,HK1,15,2025-11-24,2025-11-30,True,False,False,False,,
+NAM_1,HK1,16,2025-12-01,2025-12-07,True,False,False,False,,
+NAM_1,HK1,17,2025-12-08,2025-12-14,True,False,False,False,,
+NAM_1,HK1,18,2025-12-15,2025-12-21,True,False,False,False,,Pb
+NAM_1,HK1,19,2025-12-22,2025-12-28,False,False,True,False,,"Th, Av"
+NAM_1,HK1,20,2025-12-29,2026-01-04,True,False,False,True,2026-01-01,Av
+NAM_1,HK2,22,2026-01-12,2026-01-18,True,False,False,False,,
+NAM_1,HK2,23,2026-01-19,2026-01-25,True,False,False,False,,
+NAM_1,HK2,24,2026-01-26,2026-02-01,True,False,False,False,,
+NAM_1,HK2,25,2026-02-02,2026-02-08,True,False,False,False,,
+NAM_1,HK2,26,2026-02-09,2026-02-15,False,False,False,True,,Nghi Tet Nguyen Dan
+NAM_1,HK2,27,2026-02-16,2026-02-22,False,False,False,True,,Nghi Tet Nguyen Dan
+NAM_1,HK2,28,2026-02-23,2026-03-01,True,False,False,False,,GDQP-AN (Đợt 1)
+NAM_1,HK2,29,2026-03-02,2026-03-08,True,False,False,False,,GDQP-AN (Đợt 1)
+NAM_1,HK2,30,2026-03-09,2026-03-15,True,False,False,False,,GDQP-AN (Đợt 1)
+NAM_1,HK2,31,2026-03-16,2026-03-22,True,False,False,False,,GDQP-AN (Đợt 2)
+NAM_1,HK2,32,2026-03-23,2026-03-29,True,False,False,False,,GDQP-AN (Đợt 2)
+NAM_1,HK2,33,2026-03-30,2026-04-05,True,False,False,False,,GDQP-AN (Đợt 2)
+NAM_1,HK2,34,2026-04-06,2026-04-12,True,True,False,False,,K
+NAM_1,HK2,35,2026-04-13,2026-04-19,True,False,False,False,,
+NAM_1,HK2,36,2026-04-20,2026-04-26,True,False,False,False,,
+NAM_1,HK2,37,2026-04-27,2026-05-03,True,False,False,True,"2026-04-27,2026-04-30,2026-05-01",
+NAM_1,HK2,38,2026-05-04,2026-05-10,True,False,False,False,,
+NAM_1,HK2,39,2026-05-11,2026-05-17,True,False,False,False,,
+NAM_1,HK2,40,2026-05-18,2026-05-24,True,False,False,False,,
+NAM_1,HK2,41,2026-05-25,2026-05-31,True,False,False,False,,
+NAM_1,HK2,42,2026-06-01,2026-06-07,True,False,False,False,,
+NAM_1,HK2,43,2026-06-08,2026-06-14,False,False,True,False,,Th
+NAM_1,HE,44,2026-06-15,2026-06-21,False,False,False,False,,TTNT
+NAM_1,HE,45,2026-06-22,2026-06-28,False,False,False,False,,TTNT
+NAM_1,HE,46,2026-06-29,2026-07-05,False,False,False,False,,TTNT
+NAM_1,HE,47,2026-07-06,2026-07-12,False,False,False,False,,TTNT
+NAM_1,HE,48,2026-07-13,2026-07-19,False,False,False,False,,TTNT
+NAM_1,HE,49,2026-07-20,2026-07-26,False,False,False,False,,TTNT
+NAM_1,HE,50,2026-07-27,2026-08-02,False,False,False,False,,TTNT
+NAM_1,HE,51,2026-08-03,2026-08-09,False,False,False,False,,TTNT
+NAM_1,HE,52,2026-08-10,2026-08-16,False,False,False,False,,TTNT
+NAM_1,HE,53,2026-08-17,2026-08-23,False,False,False,False,,
+NAM_1,HE,54,2026-08-24,2026-08-30,False,False,False,False,,
