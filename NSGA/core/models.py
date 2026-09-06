@@ -1,7 +1,7 @@
 """Canonical models shared by data preparation and chromosome operators."""
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import date
 from enum import Enum
 from types import MappingProxyType
@@ -165,6 +165,12 @@ class ProblemInstance:
     student_to_courses: Mapping[str, frozenset[str]]
     course_to_students: Mapping[str, frozenset[str]]
     issues: tuple[DataIssue, ...] = ()
+    mandatory_course_ids: frozenset[str] = frozenset()  # dùng cho check_mandatory_courses (core/evalution.py)
+    teachers: frozenset[str] = frozenset() # tạo giáo viên giả để check
+    min_weeks_lecture_to_lab: int = 1 # Kiểu lab cách lecture 1 buổi í
+    minimum_empty_slots: int = 3 # Khoảng cách giữa 2 campus là 3*50 = 150 phút > 2 giờ
+    f3_weight_pack: float = 0.5 # Để cân bằng giữa việc không dồn môn vào 1 ngày và các môn được chia đều trong tuần
+    f3_weight_gap: float = 0.5 # Để cân bằng giữa việc không dồn môn vào 1 ngày và các môn được chia đều trong tuần
 
     def __post_init__(self) -> None:
         ids = [session.session_id for session in self.sessions]
@@ -180,3 +186,40 @@ V = TypeVar("V")
 
 def frozen_mapping(values: Mapping[K, V]) -> Mapping[K, V]:
     return MappingProxyType(dict(values))
+
+
+@dataclass(frozen=True, slots=True)
+class Violation:
+    code: str
+    priority: str          # e.g. "HARD"
+    severity: str          # e.g. "ERROR" | "WARNING"
+    message: str
+    location: dict
+    affected_entities: dict
+    current_value: object | None = None
+    required_value: object | None = None
+    suggested_actions: list[str] = field(default_factory=list)
+
+
+@dataclass(frozen=True, slots=True)
+class StudentAssignment:
+    student_id: str
+    course_id: str
+    section_id: str | None  # None if unfulfilled
+
+
+@dataclass(frozen=True, slots=True)
+class AssignmentResult:
+    """Proposed shape for core/assignment.py output. Not implemented there yet."""
+    assignments: tuple[StudentAssignment, ...]
+    unfulfilled: tuple[StudentAssignment, ...]  # student_id/course_id with section_id=None
+
+
+@dataclass(frozen=True, slots=True)
+class EvaluationResult:
+    raw_objectives: tuple[float, ...]
+    normalized_objectives: tuple[float, ...]
+    violations: tuple[Violation, ...]
+    constraint_key: tuple[int, ...]
+    student_assignment: tuple[StudentAssignment, ...]
+    student_impact: dict
