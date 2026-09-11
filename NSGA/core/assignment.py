@@ -3,6 +3,7 @@ from __future__ import annotations
 
 from collections import defaultdict
 from dataclasses import dataclass
+from core.models import Gene # import tạm để nó ko có báo lỗi, đỡ khó chịu
  
 import random
 
@@ -163,10 +164,20 @@ def _build_class_groups(
                 occs += occ_by_section.get(lab_section_id, ())
             else:
                 lab_section_id = None  # lab not actually scheduled; treat group as lecture-only
- 
+
+        # ADDITIONAL CAPACITY CHECK: The actual capacity of a class group is the minimum of the lecture's max capacity and the smallest room capacity among its occurrences.
+        min_room_capacity = section.max_capacity
+        for occ in occs:
+            room = problem.rooms.get(occ.room_id)
+            if room and room.capacity > 0:
+                min_room_capacity = min(min_room_capacity, room.capacity)
+        
+        actual_capacity = min(section.max_capacity, min_room_capacity)
+        # END OF ADDITIONAL CAPACITY CHECK
+
         groups_by_course[section.course_id].append(_ClassGroup(
             course_id=section.course_id, section_id=section.section_id,
-            lab_section_id=lab_section_id, capacity=section.max_capacity, occurrences=occs,
+            lab_section_id=lab_section_id, capacity=actual_capacity, occurrences=occs,
         ))
     for groups in groups_by_course.values():
         groups.sort(key=lambda g: g.section_id)  # deterministic order
@@ -175,3 +186,206 @@ def _build_class_groups(
  
 def _has_conflict(busy: list[Occurrence], candidate_occs: list[Occurrence]) -> bool:
     return any(occurrences_conflict(a, b) for a in busy for b in candidate_occs)
+
+def _has_campus_conflict(busy_occs: list[Occurrence], candidate_occs: list[Occurrence], min_gap: int) -> bool:
+    """Check the travel time between 2 campuses within the same day."""
+    if min_gap <= 0:
+        return False
+    for c in candidate_occs:
+        for b in busy_occs:
+            if c.week == b.week and c.day == b.day and c.campus != b.campus:
+                if c.campus is None or b.campus is None:
+                    continue
+                # Calculate the gap between the two occurrences
+                if c.start_slot > b.start_slot:
+                    gap = c.start_slot - b.end_slot - 1
+                else:
+                    gap = b.start_slot - c.end_slot - 1
+                
+                if gap < min_gap:
+                    return True
+    return False
+
+def assign_students(
+    problem: ProblemInstance, 
+    chromosome: Chromosome, 
+    exact: bool = False
+) -> AssignmentResult:
+    """
+    Select the way to assign students based on the `exact` flag.
+    exact == True: use assign_students_exact() #More acreurate but slower, suitable for final evaluation.
+    exact == False: use assign_students_fast() #Faster but less accurate, suitable for GA iterations.
+    """
+    if exact:
+        return assign_students_exact(problem, chromosome)
+    return assign_students_fast(problem, chromosome)
+
+def assign_students_fast(problem: ProblemInstance, chromosome: Chromosome) -> AssignmentResult:
+    """This function is used to assign students based on the given chromosome. It is used while GA is running."""
+    
+    occ_by_section = group_by_key(expand_occurrences(problem, chromosome), lambda o: o.section_id)
+    groups_by_course = _build_class_groups(problem, chromosome, occ_by_section)
+    
+    enrolled_count = defaultdict(int)
+    student_busy_occs = defaultdict(list)
+    assignments = []
+    unfulfilled = []
+    
+    # Pre-calculate the number of available class groups for each course
+    course_group_count = {cid: len(groups) for cid, groups in groups_by_course.items()}
+    
+    def student_priority_key(sid: str) -> tuple[int, int]:
+        requested = problem.student_to_courses[sid]
+        # Count how many requested courses are "bottlenecks" (<= 2 groups available)
+        bottleneck_count = sum(1 for cid in requested if course_group_count.get(cid, 0) <= 2)
+        return (bottleneck_count, len(requested))
+    
+    # Sort students: Priority 1 = Bottlenecks, Priority 2 = Total requested courses
+    students = sorted(
+        problem.student_to_courses.keys(),
+        key=student_priority_key,
+        reverse=True
+    )
+    
+    for student_id in students:
+        requested_courses = problem.student_to_courses[student_id]
+        for course_id in requested_courses:
+            assigned = False
+            available_groups = groups_by_course.get(course_id, [])
+            
+            # Sort groups: Prioritize filling classes that are already partially full
+            available_groups.sort(
+                key=lambda g: enrolled_count[g.section_id] / g.capacity if g.capacity > 0 else 0,
+                reverse=True
+            )
+            
+            for group in available_groups:
+                if enrolled_count[group.section_id] >= group.capacity:
+                    continue
+                if _has_conflict(student_busy_occs[student_id], group.occurrences):
+                    continue
+                if _has_campus_conflict(student_busy_occs[student_id], group.occurrences, problem.minimum_empty_slots):
+                    continue
+                    
+                enrolled_count[group.section_id] += 1
+                student_busy_occs[student_id].extend(group.occurrences)
+                assignments.append(StudentAssignment(student_id, course_id, group.section_id))
+                assigned = True
+                break
+                
+            if not assigned:
+                unfulfilled.append(StudentAssignment(student_id, course_id, None))
+                
+    return AssignmentResult(tuple(assignments), tuple(unfulfilled))
+
+def assign_students_exact(problem: ProblemInstance, chromosome: Chromosome) -> AssignmentResult:
+    """
+    Sử dụng OR-Tools (CP-SAT) để tối ưu hóa việc phân bổ sinh viên cho các nghiệm Elite.
+    Được mồi sẵn nghiệm từ assign_students_fast để hội tụ nhanh.
+    """
+    from ortools.sat.python import cp_model # pip install ortools
+
+    occ_by_section = group_by_key(expand_occurrences(problem, chromosome), lambda o: o.section_id)
+    groups_by_course = _build_class_groups(problem, chromosome, occ_by_section)
+    
+    fast_result = assign_students_fast(problem, chromosome)
+    fast_assignments = {(a.student_id, a.course_id): a.section_id for a in fast_result.assignments}
+    
+    model = cp_model.CpModel()
+    x = {}  # dict: (student_id, course_id, section_id) -> cp_model.BoolVar
+    
+    for student_id, courses in problem.student_to_courses.items():
+        for course_id in courses:
+            student_course_vars = []
+            for group in groups_by_course.get(course_id, []):
+                if group.capacity <= 0:
+                    continue
+                var = model.NewBoolVar(f"x_{student_id}_{course_id}_{group.section_id}")
+                x[(student_id, course_id, group.section_id)] = var
+                student_course_vars.append(var)
+                
+                if fast_assignments.get((student_id, course_id)) == group.section_id:
+                    model.AddHint(var, 1)
+                else:
+                    model.AddHint(var, 0)
+            
+            if student_course_vars:
+                model.AddAtMostOne(student_course_vars)
+
+    for course_id, groups in groups_by_course.items():
+        for group in groups:
+            if group.capacity <= 0:
+                continue
+            group_vars = []
+            for student_id in problem.course_to_students.get(course_id, []):
+                var = x.get((student_id, course_id, group.section_id))
+                if var is not None:
+                    group_vars.append(var)
+            if group_vars:
+                model.Add(sum(group_vars) <= group.capacity)
+
+    for student_id, courses in problem.student_to_courses.items():
+        student_vars = []
+        for course_id in courses:
+            for group in groups_by_course.get(course_id, []):
+                var = x.get((student_id, course_id, group.section_id))
+                if var is not None:
+                    student_vars.append((var, group))
+        
+        for i in range(len(student_vars)):
+            var1, group1 = student_vars[i]
+            for j in range(i + 1, len(student_vars)):
+                var2, group2 = student_vars[j]
+                
+                if _has_conflict(group1.occurrences, group2.occurrences):
+                    model.AddImplication(var1, var2.Not())
+
+                elif _has_campus_conflict(group1.occurrences, group2.occurrences, problem.minimum_empty_slots):
+                    model.AddImplication(var1, var2.Not())
+
+    model.Maximize(sum(x.values()))
+
+    solver = cp_model.CpSolver()
+    solver.parameters.max_time_in_seconds = 30.0  # Set a time limit for the solver, can change as needed or turn off 
+    status = solver.Solve(model)
+
+    assignments = []
+    unfulfilled = []
+    assigned_pairs = set()
+
+    # If the solver finds an optimal or feasible solution, we extract the assignments from the solution, else we reuse the fast result.
+    if status in (cp_model.OPTIMAL, cp_model.FEASIBLE):
+        for (student_id, course_id, section_id), var in x.items():
+            if solver.Value(var):
+                assignments.append(StudentAssignment(student_id, course_id, section_id))
+                assigned_pairs.add((student_id, course_id))
+    else:
+        return fast_result
+
+    for student_id, courses in problem.student_to_courses.items():
+        for course_id in courses:
+            if (student_id, course_id) not in assigned_pairs:
+                unfulfilled.append(StudentAssignment(student_id, course_id, None))
+
+    return AssignmentResult(tuple(assignments), tuple(unfulfilled))
+
+def calculate_student_impact(problem: ProblemInstance, chromosome: Chromosome, assignment: AssignmentResult) -> dict:
+    """Count the number of fulfilled and unfulfilled course requests for each student based on the assignment result. The result is used as a optimized objective."""
+    impact = {}
+    
+    for student_id, courses in problem.student_to_courses.items():
+        impact[student_id] = {
+            "fulfilled": 0,
+            "unfulfilled": 0,
+            "total_requested": len(courses)
+        }
+        
+    for req in assignment.assignments:
+        impact[req.student_id]["fulfilled"] += 1
+        
+    for req in assignment.unfulfilled:
+        impact[req.student_id]["unfulfilled"] += 1
+        
+    return impact
+
+ 
