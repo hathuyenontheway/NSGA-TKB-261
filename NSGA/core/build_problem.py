@@ -42,7 +42,8 @@ def _synthesize_dummy_teachers(
     updated = list(sections)
     all_teachers: set[str] = set()
     for faculty_id, section_indices in sections_by_faculty.items():
-        faculty_teachers = [f"{faculty_id}-GV{n:02d}" for n in range(1, dummy_teachers_per_faculty + 1)]
+        num_teachers = min(len(section_indices), dummy_teachers_per_faculty)
+        faculty_teachers = [f"{faculty_id}-GV{n:02d}" for n in range(1, num_teachers + 1)]
         all_teachers.update(faculty_teachers)
         for i, section_idx in enumerate(section_indices):
             teacher_id = faculty_teachers[i % len(faculty_teachers)]
@@ -72,10 +73,18 @@ def build_problem_instance(prepared: PreparedData, policy: BuildPolicy | None = 
         expected = enrollment.get(course_id, policy.default_mandatory_students)
         count = max(1, ceil(expected / policy.default_section_capacity))
         rooms = tuple(sorted(rid for rid in prepared.course_to_rooms.get(course_id, ()) if prepared.rooms[rid].capacity > 0))
-        slots = tuple(range(1, policy.slots_per_day - policy.default_session_slots + 2))
+        LUNCH_SLOT = 6
+        slots = tuple(
+            slot for slot in range(1, policy.slots_per_day - policy.default_session_slots + 2)
+            if not (slot <= LUNCH_SLOT <= slot + policy.default_session_slots - 1)
+        )
         weeks = tuple(week.week for week in teaching_weeks)
-        is_alternating = course_id in lab_by_lecture
-        occurrence_count = ceil(len(teaching_weeks) / 2) if is_alternating else len(teaching_weeks)
+        is_alternating = (course.course_type == CourseType.LAB or bool(course.companion_course_id))
+        week_step = 2 if is_alternating else 1
+        occurrence_count = ceil(len(weeks) / week_step)
+        valid_start_weeks = tuple(
+            week for index, week in enumerate(weeks)
+            if len(weeks[index::week_step]) >= occurrence_count)
         lab_course_id = lab_by_lecture.get(course_id)
         lab_course = prepared.courses[lab_course_id] if lab_course_id else None
         lab_rooms = (tuple(sorted(rid for rid in prepared.course_to_rooms.get(lab_course_id, ()) if prepared.rooms[rid].capacity > 0)) if lab_course_id else ())
@@ -83,8 +92,8 @@ def build_problem_instance(prepared: PreparedData, policy: BuildPolicy | None = 
             section_id, session_id = f"{course_id}-{number:02d}", len(sessions)
             size = min(policy.default_section_capacity, max(0, expected - (number - 1) * policy.default_section_capacity))
             sections.append(Section(section_id, course_id, course.course_type, size, policy.default_section_capacity))
-            sessions.append(Session(session_id, section_id, course_id, course.course_type, policy.default_session_slots, occurrence_count, rooms, weeks, policy.allowed_days, slots))
-            domain = GeneDomain(session_id, rooms, policy.allowed_days, slots, weeks)
+            sessions.append(Session(session_id, section_id, course_id, course.course_type, policy.default_session_slots, occurrence_count, rooms, valid_start_weeks, policy.allowed_days, slots))
+            domain = GeneDomain(session_id, rooms, policy.allowed_days, slots, valid_start_weeks)
             domains.append(domain)
             if domain.is_empty:
                 issues.append(DataIssue("EMPTY_GENE_DOMAIN", "ERROR", "Session cannot be encoded because its domain is empty", section_id))
@@ -93,9 +102,9 @@ def build_problem_instance(prepared: PreparedData, policy: BuildPolicy | None = 
                 sections.append(Section(lab_section_id, lab_course_id, lab_course.course_type, size, policy.default_section_capacity, parent_section_id=section_id))
                 sessions.append(Session(
                     lab_session_id, lab_section_id, lab_course_id, lab_course.course_type, policy.default_session_slots,
-                    occurrence_count, lab_rooms, weeks, policy.allowed_days, slots, parent_session_id=session_id,
+                    occurrence_count, lab_rooms, valid_start_weeks, policy.allowed_days, slots, parent_session_id=session_id,
                 ))
-                lab_domain = GeneDomain(lab_session_id, lab_rooms, policy.allowed_days, slots, weeks)
+                lab_domain = GeneDomain(lab_session_id, lab_rooms, policy.allowed_days, slots, valid_start_weeks)
                 domains.append(lab_domain)
                 if lab_domain.is_empty:
                     issues.append(DataIssue("EMPTY_GENE_DOMAIN", "ERROR", "Lab session cannot be encoded because its domain is empty", lab_section_id))

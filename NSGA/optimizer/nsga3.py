@@ -22,62 +22,14 @@ from pymoo.core.sampling import Sampling  # Lớp cha để sinh population ban 
 from pymoo.optimize import minimize  # Điều khiển vòng lặp tiến hóa.
 from pymoo.util.ref_dirs import get_reference_directions  # Sinh reference directions.
 
-from core.assignment import create_random_chromosome, validate_chromosome_structure
-from core.models import Chromosome, ProblemInstance
-from core.evaluation import evaluator
+from core.assignment import create_random_chromosome, expand_occurrences, is_alternating_session, occurrence_weeks, validate_chromosome_structure
+from core.models import Chromosome, ProblemInstance, EvaluationResult
+from core.evaluation import evaluate_fast
 
-FloatVector = NDArray[np.float64]  # Vector objective hoặc constraint.
-Evaluator = Callable[[ProblemInstance, Chromosome], tuple[FloatVector, FloatVector | None]]  # (F, G).
-N_HARD_CONSTRAINTS = 10
+Evaluator = Callable[[ProblemInstance, Chromosome], EvaluationResult]
 N_SOFT_CONSTRAINTS = 8
-EVALUATOR: Evaluator = evaluator
-
-
-@dataclass(slots=True)
-class ChromosomeArrays:
-    room_ids: NDArray[np.object_]   # Phòng của từng Gene.
-    days: NDArray[np.int64]         # Ngày học của từng Gene.
-    start_slots: NDArray[np.int64]  # Tiết bắt đầu của từng Gene.
-    start_weeks: NDArray[np.int64]  # Tuần bắt đầu của từng Gene.
-
-    # Ví dụ 3 Gene:
-    # room_ids=["A1-101", "B1-203", "C4-401"], days=[2, 3, 5], start_slots=[1, 4, 7], start_weeks=[1, 1, 2]. 
-    # Mỗi mảng có shape (3,).
-
-    @property
-    def size(self) -> int:
-        return len(self.days)
-
-
-def chromosome_to_arrays(chromosome: Chromosome) -> ChromosomeArrays:
-    # VD: Gene("A1-101", day=2, slot=1, week=1)
-    return ChromosomeArrays(
-        room_ids=np.asarray([gene.room_id for gene in chromosome.genes], dtype=object),
-        days=np.asarray([gene.day for gene in chromosome.genes], dtype=np.int64),
-        start_slots=np.asarray([gene.start_slot for gene in chromosome.genes], dtype=np.int64),
-        start_weeks=np.asarray([gene.start_week for gene in chromosome.genes], dtype=np.int64)
-    )
-
-
-def arrays_to_chromosome(template: Chromosome, arrays: ChromosomeArrays) -> Chromosome:
-    # Ví dụ 589 Gene -> expected_shape=(589,).
-    expected_shape = (len(template.genes),)
-    actual_shapes = {arrays.room_ids.shape, arrays.days.shape, arrays.start_slots.shape, arrays.start_weeks.shape}
-    # Nếu cả bốn mảng có shape (589,), set trên rút gọn thành {(589,)}.
-    # Nếu days chỉ có 588 phần tử, kết quả thành {(589,), (588,)} và báo lỗi.
-
-    if actual_shapes != {expected_shape}:
-        raise ValueError(f"Every chromosome array must have shape {expected_shape}; Received {sorted(actual_shapes)}")
-
-    chromosome = template.copy()
-    for index, gene in enumerate(chromosome.genes):
-        gene.room_id = str(arrays.room_ids[index])
-        gene.day = int(arrays.days[index])
-        gene.start_slot = int(arrays.start_slots[index])
-        gene.start_week = int(arrays.start_weeks[index])
-
-    return chromosome
-
+N_CONSTRAINT_OUTPUTS = 1
+EVALUATOR: Evaluator = evaluate_fast
 
 @dataclass(frozen=True, slots=True)
 class NSGA3Config:
@@ -119,9 +71,9 @@ class TimetableProblem(ElementwiseProblem):
 
     def _evaluate(self, x: NDArray[np.object_], out: dict[str, Any], *args, **kwargs) -> None:
         chromosome = x[0]
-        objectives, constraints = self.evaluator(self.instance, chromosome)
-
-        objectives = np.asarray(objectives, dtype=float) # Ví dụ ba objective: F=[12.0, 4.0, 90.0], shape=(3,).
+        result = self.evaluator(self.instance, chromosome)
+        objectives = np.asarray(result.raw_objectives, dtype=float) #F = [f1, f2, ..., f8]
+        constraints = np.asarray([result.constraint_key[0]], dtype=float) #G = [Tổng số hard errors]
         expected_f_shape = (self.n_obj,)
 
         # Mỗi chromosome phải trả đúng một giá trị cho mỗi objective.
@@ -209,46 +161,183 @@ class GeneBasedCrossover(Crossover):
     start_slots=(1, 4, 7),
     start_weeks=(1, 2))
 """
-class DomainRestrictedRoomMutation(Mutation):
+class GeneDomainMutation(Mutation):
     def __init__(self, probability: float) -> None:
         super().__init__(prob=probability)
 
-    # Ví dụ 120 offspring -> X có shape (120, 1).
-    def _do(self, problem: TimetableProblem, X: NDArray[np.object_], *args, random_state: np.random.Generator | None = None, **kwargs) -> NDArray[np.object_]:
+    def _do(
+        self, problem: TimetableProblem,
+        X: NDArray[np.object_], *args,
+        random_state: np.random.Generator | None = None,
+        **kwargs) -> NDArray[np.object_]:
+
         if random_state is None:
             raise RuntimeError("pymoo did not provide random_state")
 
         offspring = np.empty_like(X, dtype=object)
-        domains = problem.instance.gene_domains  # ProblemInstance.gene_domains
-
-        for i in range(X.shape[0]):
-            chromosome = X[i, 0].copy() # Chromosome.copy()
+        domains = problem.instance.gene_domains
+        for index in range(X.shape[0]):
+            chromosome = X[index, 0].copy()
             chromosome.rank = None
             chromosome.objectives = ()
             chromosome.constraint_violation = 0.0
 
             if len(chromosome.genes) != len(domains):
-                raise ValueError("Gene count does not match the GeneDomain count")
+                raise ValueError("Gene count does not match GeneDomain count")
 
-            # VD: candidates (7, ("A1-101", "B1-203")) nghĩa là Gene index 7 có thể đổi sang một trong hai phòng này.
-            candidates: list[tuple[int, tuple[str, ...]]] = []
-            for g_index, (gene, domain) in enumerate(zip(chromosome.genes, domains, strict=True)):
+            candidates: list[tuple[int, str, tuple[Any, ...]]] = []
+            for gene_index, (gene, domain) in enumerate(zip(chromosome.genes, domains, strict=True)):
                 if gene.session_id != domain.session_id:
                     raise ValueError("GeneDomain order does not match gene order")
 
-                alt_rooms = tuple(room_id for room_id in domain.room_ids if room_id != gene.room_id)
-                if alt_rooms:
-                    candidates.append((g_index, alt_rooms))
+                attributes = (
+                    ("room_id", gene.room_id, domain.room_ids),
+                    ("day", gene.day, domain.days),
+                    ("start_slot", gene.start_slot, domain.start_slots),
+                    ("start_week", gene.start_week, domain.start_weeks))
+
+                for attribute, current_value, allowed_values in attributes:
+                    alternatives = tuple(value for value in allowed_values if value != current_value)
+
+                    if alternatives:
+                        candidates.append((gene_index, attribute, alternatives))
 
             if candidates:
-                candidate_i = int(random_state.integers(0, len(candidates)))
-                gene_i, alt_rooms = candidates[candidate_i]
-                new_room_i = int(random_state.integers(0, len(alt_rooms)))
-                chromosome.genes[gene_i].room_id = alt_rooms[new_room_i]
-            offspring[i, 0] = chromosome
+                candidate_index = int(random_state.integers(0, len(candidates)))
+                gene_index, attribute, alternatives = candidates[candidate_index]
+                value_index = int(random_state.integers(0, len(alternatives)))
+                new_value = alternatives[value_index]
+                setattr(chromosome.genes[gene_index], attribute, new_value)
+
+            offspring[index, 0] = chromosome
 
         return offspring
 
+class TimetableRepair(Repair):
+    """
+    Sửa chữa chromosome theo thứ tự:
+    1. Chuẩn hóa giá trị ngoài domain về trong domain.
+    2. Phát hiện xung đột phòng và giảng viên.
+    3. Thử tìm phương án thay thế trong domain để giải phóng xung đột.
+    4. Giới hạn số lần thử (max_trials) tránh vòng lặp vô tận.
+    """
+    def __init__(self, max_trials: int = 10) -> None:
+        super().__init__()
+        self.max_trials = max_trials
+
+    def _repair_chromosome(self, problem: ProblemInstance, chromosome: Chromosome, rng: np.random.Generator) -> Chromosome:
+        domains = problem.gene_domains
+        if len(chromosome.genes) != len(domains):
+            raise ValueError("Gene count does not match GeneDomain count")
+
+        gene_index_by_session = {gene.session_id: index for index, gene in enumerate(chromosome.genes)}
+
+        # 1. Kiểm tra cấu trúc và đưa các giá trị ngoài domain về hợp lệ
+        for gene, domain in zip(chromosome.genes, domains, strict=True):
+            if gene.session_id != domain.session_id:
+                raise ValueError("GeneDomain order does not match gene order")
+            if gene.room_id not in domain.room_ids and domain.room_ids:
+                gene.room_id = domain.room_ids[0]
+            if gene.day not in domain.days and domain.days:
+                gene.day = domain.days[0]
+            if gene.start_slot not in domain.start_slots and domain.start_slots:
+                gene.start_slot = domain.start_slots[0]
+            if gene.start_week not in domain.start_weeks and domain.start_weeks:
+                gene.start_week = domain.start_weeks[0]
+
+        sections = {s.section_id: s for s in problem.sections}
+        sessions = {s.session_id: s for s in problem.sessions}
+
+        # 2. Vòng lặp sửa xung đột với giới hạn số lần thử
+        for _ in range(self.max_trials):
+            occs = expand_occurrences(problem, chromosome)
+            room_grid: dict[tuple[str, int, int, int], int] = {}
+            teacher_grid: dict[tuple[str, int, int, int], int] = {}
+            conflicts: set[int] = set()
+
+            for occ in occs:
+                for slot in range(occ.start_slot, occ.end_slot + 1):
+                    rk = (occ.room_id, occ.week, occ.day, slot)
+                    if rk in room_grid and room_grid[rk] != occ.session_id:
+                        conflicts.add(occ.session_id)
+                        conflicts.add(room_grid[rk])
+                    else:
+                        room_grid[rk] = occ.session_id
+
+                    if occ.teacher_id:
+                        tk = (occ.teacher_id, occ.week, occ.day, slot)
+                        if tk in teacher_grid and teacher_grid[tk] != occ.session_id:
+                            conflicts.add(occ.session_id)
+                            conflicts.add(teacher_grid[tk])
+                        else:
+                            teacher_grid[tk] = occ.session_id
+
+            if not conflicts:
+                break
+
+            target_sid = int(rng.choice(sorted(conflicts)))
+            target_index = gene_index_by_session[target_sid]
+            gene = chromosome.genes[target_index]
+            domain = domains[target_index]
+            session = sessions[target_sid]
+            teacher_id = sections[session.section_id].teacher_id
+            step = 2 if is_alternating_session(problem, session) else 1
+
+            candidate_slots = list(domain.start_slots); rng.shuffle(candidate_slots)
+            candidate_days = list(domain.days); rng.shuffle(candidate_days)
+            candidate_rooms = list(domain.room_ids); rng.shuffle(candidate_rooms)
+            candidate_weeks = list(domain.start_weeks); rng.shuffle(candidate_weeks)
+
+            best_choice = None
+            found_free = False
+            for w in candidate_weeks:
+                weeks_occ = occurrence_weeks(problem, w, session.total_weeks, step)
+                for d in candidate_days:
+                    for sl in candidate_slots:
+                        for r in candidate_rooms:
+                            clash = False
+                            for wk in weeks_occ:
+                                for s_offset in range(session.duration_slots):
+                                    cur_s = sl + s_offset
+                                    rk = (r, wk, d, cur_s)
+                                    if rk in room_grid and room_grid[rk] != target_sid:
+                                        clash = True; break
+                                    if teacher_id:
+                                        tk = (teacher_id, wk, d, cur_s)
+                                        if tk in teacher_grid and teacher_grid[tk] != target_sid:
+                                            clash = True; break
+                                if clash: break
+                            if not clash:
+                                best_choice = (r, d, sl, w)
+                                found_free = True
+                                break
+                        if found_free: break
+                    if found_free: break
+                if found_free: break
+
+            if best_choice:
+                gene.room_id, gene.day, gene.start_slot, gene.start_week = best_choice
+
+        return chromosome
+
+    def _do(
+        self,
+        problem,
+        X: NDArray[np.object_],
+        *args,
+        random_state: np.random.Generator | None = None,
+        **kwargs,
+    ) -> NDArray[np.object_]:
+        instance = getattr(problem, "instance", problem)
+        rng = random_state if random_state is not None else np.random.default_rng()
+        repaired = np.empty_like(X, dtype=object)
+        for index in range(X.shape[0]):
+            chromosome = X[index, 0].copy()
+            chromosome.rank = None
+            chromosome.objectives = ()
+            chromosome.constraint_violation = 0.0
+            repaired[index, 0] = self._repair_chromosome(instance, chromosome, rng)
+        return repaired
 
 def create_reference_directions(n_objectives: int, n_partitions: int) -> NDArray[np.float64]:
     # Tạo n = C(H + M - 1, M - 1) reference directions với H=n_partitions và M=n_objectives, shape (n, M).
@@ -270,29 +359,43 @@ def create_nsga3(*, n_objectives: int = N_SOFT_CONSTRAINTS, config: NSGA3Config,
         raise ValueError(f"population_size must be at least {len(reference_directions)}")
 
     return NSGA3(
-        ref_dirs=reference_directions,
-        pop_size=population_size,
-        n_offsprings=config.n_offsprings,
-        sampling=sampling,
+        ref_dirs=reference_directions, pop_size=population_size,
+        n_offsprings=config.n_offsprings, sampling=sampling,
         crossover=crossover if crossover is not None else GeneBasedCrossover(config.crossover_probability),
-        mutation=mutation if mutation is not None else DomainRestrictedRoomMutation(config.mutation_probability),
-        repair=repair,
-        eliminate_duplicates=False)
+        mutation=mutation if mutation is not None else GeneDomainMutation(config.mutation_probability),
+        repair=repair if repair is not None else TimetableRepair(), eliminate_duplicates=False)
 
+def _sync_chromosome_metadata(collection) -> None:
+    if collection is None:
+        return
 
-def run_nsga3(*, problem_instance: ProblemInstance, n_objectives: int,
-              n_constraints: int = 0, evaluator: Evaluator = EVALUATOR,
-              config: NSGA3Config | None = None,
-              repair: Repair | None = None, verbose: bool = False, save_history: bool = False):
-    config = NSGA3Config()
+    for individual in collection:
+        chromosome = individual.X[0]
+
+        if individual.F is not None:
+            chromosome.objectives = tuple(float(value) for value in individual.F)
+
+        if individual.CV is not None:
+            chromosome.constraint_violation = float(individual.CV[0])
+
+        rank = individual.get("rank")
+        chromosome.rank = None if rank is None else int(rank)
+
+def run_nsga3(*, problem_instance: ProblemInstance, n_objectives: int = N_SOFT_CONSTRAINTS,
+              n_constraints: int = N_CONSTRAINT_OUTPUTS, evaluator: Evaluator = EVALUATOR,
+              config: NSGA3Config | None = None, repair: Repair | None = None,
+              verbose: bool = False, save_history: bool = False):
+    config = config or NSGA3Config()
     problem = TimetableProblem(problem_instance, evaluator, n_objectives=n_objectives, n_constraints=n_constraints)
     sampling = ChromosomeSampling()
     algorithm = create_nsga3(n_objectives=n_objectives, config=config, sampling=sampling, repair=repair)
-
-    return minimize(
-        problem,
-        algorithm,
+    result = minimize(
+        problem, algorithm, 
         termination=("n_gen", config.n_generations),
-        seed=config.seed,
-        verbose=verbose,
+        seed=config.seed, verbose=verbose,
         save_history=save_history)
+    
+    _sync_chromosome_metadata(result.pop)
+    _sync_chromosome_metadata(result.opt)
+
+    return result

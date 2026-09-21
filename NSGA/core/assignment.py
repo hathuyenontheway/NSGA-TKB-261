@@ -3,11 +3,9 @@ from __future__ import annotations
 
 from collections import defaultdict
 from dataclasses import dataclass
-from core.models import Gene # import tạm để nó ko có báo lỗi, đỡ khó chịu
+from core.models import AssignmentResult, Chromosome, CourseType, Gene, ProblemInstance, StudentAssignment, Violation
  
 import random
-
-from core.models import AssignmentResult, Chromosome, ProblemInstance, StudentAssignment, Violation
 
 def create_random_chromosome(problem: ProblemInstance, rng: random.Random | None = None) -> Chromosome:
     """Sample each gene inside its domain; collisions are handled later."""
@@ -60,11 +58,13 @@ def occurrence_weeks(problem: ProblemInstance, start_week: int, total_weeks: int
  
  
 def is_alternating_session(problem: ProblemInstance, session) -> bool:
-    """True if this session belongs to a lecture+lab pair that meets on alternating weeks."""
-    if session.parent_session_id is not None:
-        return True
+    """Lecture có companion và các LAB session học cách tuần."""
     course = problem.courses.get(session.course_id)
-    return bool(course and course.companion_course_id)
+    return bool(
+        session.parent_session_id is not None
+        or session.session_type == CourseType.LAB
+        or (course and course.companion_course_id)
+    )
  
  
 @dataclass(slots=True)
@@ -283,7 +283,7 @@ def assign_students_exact(problem: ProblemInstance, chromosome: Chromosome) -> A
     Sử dụng OR-Tools (CP-SAT) để tối ưu hóa việc phân bổ sinh viên cho các nghiệm Elite.
     Được mồi sẵn nghiệm từ assign_students_fast để hội tụ nhanh.
     """
-    from ortools.sat.python import cp_model # pip install ortools
+    from ortools.sat.python import cp_model
 
     occ_by_section = group_by_key(expand_occurrences(problem, chromosome), lambda o: o.section_id)
     groups_by_course = _build_class_groups(problem, chromosome, occ_by_section)
