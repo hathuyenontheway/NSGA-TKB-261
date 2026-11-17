@@ -1,0 +1,40 @@
+data:
+  directory: data
+  track: HK_CHINH
+  semester_id: HK1
+  # Optional. Add the prepared student-registration CSV here when available.
+  registrations_file: null
+
+problem:
+  # Matches the current 589-session smoke dataset; courses without a valid room
+  # mapping are excluded from the mandatory set.
+  open_all_mapped_courses: true
+  mandatory_course_ids: null
+  min_elective_students: 15
+  default_section_capacity: 60
+  default_mandatory_students: 15
+  allowed_days: [2, 3, 4, 5, 6, 7]
+  slots_per_day: 12
+  default_session_slots: 3
+  dummy_teachers_per_faculty: 3
+  min_weeks_lecture_to_lab: 1
+  minimum_empty_slots: 3
+  f3_weight_pack: 0.5
+  f3_weight_gap: 0.5
+
+optimizer:
+  # Pilot settings for the first runnable end-to-end pass.
+  # Increase population_size, n_partitions, and n_generations for real search.
+  n_partitions: 1
+  population_size: 8
+  n_offsprings: 8
+  n_generations: 2
+  seed: 42
+  crossover_probability: 0.8
+  mutation_probability: 0.2
+  verbose: false
+
+output:
+  directory: outputs
+  max_schedule_solutions: 10
+  timing_report: false  # Override with --timing or --no-timing.
